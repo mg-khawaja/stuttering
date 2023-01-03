@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "832961274225",
+    "project_id": "stuttering-3337b",
+    "storage_bucket": "stuttering-3337b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:832961274225:android:0118edcae35eb57e8e56d0",
+        "android_client_info": {
+          "package_name": "com.mgk.stuttertreatment"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "832961274225-4a63prbhtbodhofoeshnm92vkfjetnoh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDo0kOhwYrkBA6OSNiJ8bA3jsN04T6LnxU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "832961274225-4a63prbhtbodhofoeshnm92vkfjetnoh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

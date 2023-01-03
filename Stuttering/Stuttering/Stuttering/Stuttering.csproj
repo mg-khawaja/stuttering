@@ -1,0 +1,144 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Models\Paragraph.cs" />
+    <Compile Remove="Models\Phrase.cs" />
+    <Compile Remove="Models\Sentence.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="Resx\StutteringRes.resx" />
+    <EmbeddedResource Remove="Resx\StutteringRes.ur.resx" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Assets\Manrope-Regular.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\Manrope-Regular.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FaulandCc.XF.GesturePatternView" Version="1.0.4" />
+    <PackageReference Include="OTPEntryControl" Version="1.0.7" />
+    <PackageReference Include="Plugin.CloudFirestore" Version="4.1.0" />
+    <PackageReference Include="Plugin.MediaManager.Forms" Version="1.1.1" />
+    <PackageReference Include="Plugin.Multilingual" Version="1.0.2" />
+    <PackageReference Include="Rg.Plugins.Popup" Version="2.1.0" />
+    <PackageReference Include="sqlite-net-pcl" Version="1.8.116" />
+    <PackageReference Include="Syncfusion.Xamarin.SfChart" Version="20.1.0.58" />
+    <PackageReference Include="Syncfusion.Xamarin.SfNavigationDrawer" Version="20.1.0.58" />
+    <PackageReference Include="Syncfusion.Xamarin.SfPicker" Version="20.1.0.58" />
+    <PackageReference Include="Xam.Plugin.SimpleAudioPlayer" Version="1.6.0" />
+    <PackageReference Include="Xamarin.CommunityToolkit" Version="2.0.2" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2291" />  
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Resx\StutteringResources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>StutteringResources.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Assessment\Evaluation.xaml.cs">
+      <DependentUpon>Evaluation.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Assessment\Rater.xaml.cs">
+      <DependentUpon>Rater.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Assessment\Rating.xaml.cs">
+      <DependentUpon>Rating.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Auth\PinView.xaml.cs">
+      <DependentUpon>PinView.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Management\Exercise.xaml.cs">
+      <DependentUpon>Exercise.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Management\ExercisesList.xaml.cs">
+      <DependentUpon>ExercisesList.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Management\Onset.xaml.cs">
+      <DependentUpon>Onset.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Management\Flexible.xaml.cs">
+      <DependentUpon>Flexible.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Popup\SelfRatingStatsPopup.xaml.cs">
+      <DependentUpon>SelfRatingStatsPopup.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Popup\SelfEvaStatsPopup.xaml.cs">
+      <DependentUpon>SelfEvaStatsPopup.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Popup\RaterStatsPopup.xaml.cs">
+      <DependentUpon>RaterStatsPopup.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Popup\RatingInfoPopup.xaml.cs">
+      <DependentUpon>RatingInfoPopup.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\StutteringOverview\StutteringOverviewPage.xaml.cs">
+      <DependentUpon>StutteringOverviewPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\StutteringOverview\StutteringReadItemPopup.xaml.cs">
+      <DependentUpon>StutteringReadItemPopup.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Resx\StutteringResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>StutteringResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Assessment\Rater.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Auth\OnBoarding.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Auth\PatternView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Management\Breathing.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\MasterDetailPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Popup\SelfRatingStatsPopup.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Popup\SelfEvaStatsPopup.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Popup\RaterStatsPopup.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Popup\RatingInfoPopup.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Settings.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\StutteringOverview\StutteringReadItemPopup.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ViewModels\Assessment\" />
+    <Folder Include="Views\Test\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Views\MasterDetailPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+  </ItemGroup>
+</Project>

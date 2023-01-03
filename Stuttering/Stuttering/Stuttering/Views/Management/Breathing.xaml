@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:syncfusion="http://schemas.syncfusion.com/xamarin"
+             xmlns:i18n="clr-namespace:Stuttering.Helper;assembly=Stuttering"
+             x:Class="Stuttering.Views.Management.Breathing">
+    <ContentView.Content>
+        <ScrollView>
+            <Grid Padding="10">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Start"
+                             x:Name="TickButtons" IsVisible="false">
+                    <!--<ImageButton x:Name="CloseBtn" Source='close.png' BackgroundColor="Transparent"
+                         HorizontalOptions="Start" VerticalOptions="Start" WidthRequest="30" Padding="5" 
+                                 Clicked="CloseBtn_Clicked"/>-->
+                    <ImageButton x:Name="TickBtn" Source='tick.png' BackgroundColor="Transparent"
+                         HorizontalOptions="EndAndExpand" VerticalOptions="Start" WidthRequest="35" Padding="5"
+                                 Clicked="TickBtn_Clicked"/>
+                </StackLayout>
+                <StackLayout HorizontalOptions="CenterAndExpand" WidthRequest="90">
+                    <Label Text="{Binding TimerText}" 
+                   FontSize="20" Margin="0,30,0,30"
+                           />
+                </StackLayout>
+                <Frame x:Name="BreathingCircle"
+                   WidthRequest="150" HeightRequest="150" BorderColor="{StaticResource Primary}"
+                   HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" CornerRadius="150">
+                    <Frame HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+                             BackgroundColor="{StaticResource Primary}" CornerRadius="150">
+                        <Label x:Name="BreathCircleText" TextColor="White" FontAttributes="Bold"
+                       HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" HorizontalTextAlignment="Center"/>
+                    </Frame>
+                </Frame>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand"
+                             Spacing="20" IsVisible="true" x:Name="PlayButtons">
+                    <ImageButton x:Name="EditBtn" Source='pencil.png' BackgroundColor="{StaticResource Darker}"
+                         WidthRequest="35" CornerRadius="35" Padding="10" Clicked="EditBtn_Clicked"/>
+                    <ImageButton x:Name="PlayBtn" Source='play.png' BackgroundColor="{StaticResource Darker}"
+                         WidthRequest="35" CornerRadius="35" Padding="10" Clicked="PlayBtn_Clicked"/>
+                    <ImageButton x:Name="ResetBtn" Source='refreshing.png' BackgroundColor="{StaticResource Darker}"
+                         WidthRequest="35" CornerRadius="35" Padding="10" Clicked="ResetBtn_Clicked"/>
+                </StackLayout>
+                <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="EndAndExpand" x:Name="EditButtons"
+                             IsVisible="false">
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand"
+                                 IsVisible="true" >
+                        <ImageButton x:Name="DefaultBtn" Source='defaultWhite.png' BackgroundColor="{StaticResource Darker}"
+                                     WidthRequest="50" CornerRadius="50" Padding="10" HorizontalOptions="CenterAndExpand"
+                                     BorderColor="{StaticResource Darker}" Clicked="DefaultBtn_Clicked"/>
+                        <ImageButton x:Name="YogaBtn" Source='yoga.png' BackgroundColor="White"
+                                     WidthRequest="50" CornerRadius="50" Padding="10" HorizontalOptions="CenterAndExpand"
+                                     BorderColor="{StaticResource Darker}" Clicked="YogaBtn_Clicked"/>
+                        <ImageButton x:Name="SquareBtn" Source='square.png' BackgroundColor="White"
+                                     WidthRequest="50" CornerRadius="50" Padding="10" HorizontalOptions="CenterAndExpand"
+                                     BorderColor="{StaticResource Darker}" Clicked="SquareBtn_Clicked"/>
+                    </StackLayout>
+                    <StackLayout HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
+                        <Label Text="{i18n:Translate inhale}" VerticalOptions="CenterAndExpand" VerticalTextAlignment="Center"
+                               WidthRequest="60" HorizontalTextAlignment="End" Margin="0,0,5,0"/>
+                        <Frame Padding="0" WidthRequest="100">
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                                <Button Text="-" Clicked="InhaleMinus_Clicked" Padding="5" BackgroundColor="Transparent"
+                                        TextColor="{StaticResource Darker}" WidthRequest="30" HeightRequest="30"/>
+                                <Label x:Name="Inhale" Text="4" VerticalOptions="CenterAndExpand" VerticalTextAlignment="Center"
+                                       TextColor="{StaticResource Darker}" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center"/>
+                                <Button Text="+" Clicked="InhalePlus_Clicked" Padding="5" BackgroundColor="Transparent"
+                                        TextColor="{StaticResource Darker}" WidthRequest="30" HeightRequest="30"/>
+                            </StackLayout>
+                        </Frame>
+                        <Label Text="{i18n:Translate secs}" VerticalOptions="CenterAndExpand" VerticalTextAlignment="Center" Padding="5"/>
+                    </StackLayout>
+                    <StackLayout HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
+                        <Label Text="{i18n:Translate hold_1}" VerticalOptions="CenterAndExpand" VerticalTextAlignment="Center"
+                               WidthRequest="60" HorizontalTextAlignment="End" Margin="0,0,5,0"/>
+                        <Frame Padding="0" WidthRequest="100">
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                                <Button Text="-" Clicked="Hold1Minus_Clicked" Padding="5" BackgroundColor="Transparent"
+                                        TextColor="{StaticResource Darker}" WidthRequest="30" HeightRequest="30"/>
+                                <Label x:Name="Hold1" Text="0" VerticalOptions="CenterAndExpand" VerticalTextAlignment="Center"
+                                       TextColor="{StaticResource Darker}" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center"/>
+                                <Button Text="+" Clicked="Hold1Plus_Clicked" Padding="5" BackgroundColor="Transparent"
+                                        TextColor="{StaticResource Darker}" WidthRequest="30" HeightRequest="30"/>
+                            </StackLayout>
+                        </Frame>
+                        <Label Text="{i18n:Translate secs}" VerticalOptions="CenterAndExpand" VerticalTextAlignment="Center" Padding="5"/>
+                    </StackLayout>
+                    <StackLayout HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
+                        <Label Text="{i18n:Translate exhale}" VerticalOptions="CenterAndExpand" VerticalTextAlignment="Center"
+                               WidthRequest="60" HorizontalTextAlignment="End" Margin="0,0,5,0"/>
+                        <Frame Padding="0" WidthRequest="100">
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                                <Button Text="-" Clicked="ExhaleMinus_Clicked" Padding="5" BackgroundColor="Transparent"
+                                        TextColor="{StaticResource Darker}" WidthRequest="30" HeightRequest="30"/>
+                                <Label x:Name="Exhale" Text="6" VerticalOptions="CenterAndExpand" VerticalTextAlignment="Center"
+                                       TextColor="{StaticResource Darker}" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center"/>
+                                <Button Text="+" Clicked="ExhalePlus_Clicked" Padding="5" BackgroundColor="Transparent"
+                                        TextColor="{StaticResource Darker}" WidthRequest="30" HeightRequest="30"/>
+                            </StackLayout>
+                        </Frame>
+                        <Label Text="{i18n:Translate secs}" VerticalOptions="CenterAndExpand" VerticalTextAlignment="Center" Padding="5"/>
+                    </StackLayout>
+                    <StackLayout HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
+                        <Label Text="{i18n:Translate hold_2}" VerticalOptions="CenterAndExpand" VerticalTextAlignment="Center"
+                               WidthRequest="60" HorizontalTextAlignment="End" Margin="0,0,5,0"/>
+                        <Frame Padding="0" WidthRequest="100">
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                                <Button Text="-" Clicked="Hold2Minus_Clicked" BackgroundColor="Transparent"
+                                        TextColor="{StaticResource Darker}" WidthRequest="30" HeightRequest="30" Padding="5"/>
+                                <Label x:Name="Hold2" Text="0" VerticalOptions="CenterAndExpand" VerticalTextAlignment="Center"
+                                       TextColor="{StaticResource Darker}" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center"/>
+                                <Button Text="+" Clicked="Hold2Plus_Clicked"  BackgroundColor="Transparent"
+                                        TextColor="{StaticResource Darker}" WidthRequest="30" HeightRequest="30" Padding="5"/>
+                            </StackLayout>
+                        </Frame>
+                        <Label Text="{i18n:Translate secs}" VerticalOptions="CenterAndExpand" VerticalTextAlignment="Center" Padding="5"/>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="White" x:Name="duration">
+                    <Image Source="breathing.png" HorizontalOptions="CenterAndExpand" Margin="0,20,0,0"
+                           VerticalOptions="StartAndExpand" WidthRequest="200"/>
+                    <Label Text="{i18n:Translate lets_move}" HorizontalOptions="CenterAndExpand" FontSize="16"/>
+                    <Label Text="{i18n:Translate breathing_practice}" HorizontalOptions="CenterAndExpand" FontSize="18" FontAttributes="Bold"
+                           Margin="0,0,0,10"/>
+                    <syncfusion:SfPicker x:Name="picker" HeightRequest="300" HeaderText="{i18n:Translate set_time}">
+                        <!--<syncfusion:SfPicker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>1 min</x:String>
+                                <x:String>2 mins</x:String>
+                                <x:String>3 mins</x:String>
+                                <x:String>4 mins</x:String>
+                                <x:String>5 mins</x:String>
+                                <x:String>6 mins</x:String>
+                                <x:String>7 mins</x:String>
+                                <x:String>8 mins</x:String>
+                                <x:String>9 mins</x:String>
+                                <x:String>10 mins</x:String>
+                            </x:Array>
+                        </syncfusion:SfPicker.ItemsSource>-->
+                    </syncfusion:SfPicker>
+                    <Button Text="{i18n:Translate start}" WidthRequest="100" CornerRadius="10" BackgroundColor="{StaticResource Darker}" 
+                            TextColor="White" x:Name="start" Clicked="start_Clicked"/>
+                </StackLayout>
+            </Grid>
+        </ScrollView>
+    </ContentView.Content>
+</ContentView>

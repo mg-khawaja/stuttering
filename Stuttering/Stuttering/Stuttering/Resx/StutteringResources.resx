@@ -1,0 +1,448 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="10_min" xml:space="preserve">
+    <value>10 min</value>
+  </data>
+  <data name="1_min" xml:space="preserve">
+    <value>1 min</value>
+  </data>
+  <data name="2_min" xml:space="preserve">
+    <value>2 min</value>
+  </data>
+  <data name="3_min" xml:space="preserve">
+    <value>3 min</value>
+  </data>
+  <data name="4_min" xml:space="preserve">
+    <value>4 min</value>
+  </data>
+  <data name="5_min" xml:space="preserve">
+    <value>5 min</value>
+  </data>
+  <data name="6_min" xml:space="preserve">
+    <value>6 min</value>
+  </data>
+  <data name="7_min" xml:space="preserve">
+    <value>7 min</value>
+  </data>
+  <data name="8_min" xml:space="preserve">
+    <value>8 min</value>
+  </data>
+  <data name="9_min" xml:space="preserve">
+    <value>9 min</value>
+  </data>
+  <data name="attempt" xml:space="preserve">
+    <value>Please attempt the question!</value>
+  </data>
+  <data name="attempt_all" xml:space="preserve">
+    <value>Please attempt all questions!</value>
+  </data>
+  <data name="breathing_practice" xml:space="preserve">
+    <value>Breathing Practice</value>
+  </data>
+  <data name="breath_in" xml:space="preserve">
+    <value>Breath In</value>
+  </data>
+  <data name="breath_out" xml:space="preserve">
+    <value>Breath Out</value>
+  </data>
+  <data name="chapters" xml:space="preserve">
+    <value>Chapters</value>
+  </data>
+  <data name="emotional_heading" xml:space="preserve">
+    <value>Emotional Reactions</value>
+  </data>
+  <data name="emotional_para" xml:space="preserve">
+    <value>People who stutter may experience a variety of negative emotional reactions to the fact that they have difficulty in speaking. Examples include feelings of embarrassment, anxiety, and shame, which can lead to tension and struggle while speaking or attempts to avoid talking altogether.</value>
+  </data>
+  <data name="english" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="error" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="exhale" xml:space="preserve">
+    <value>Exhale</value>
+  </data>
+  <data name="facts_heading" xml:space="preserve">
+    <value>Facts about Stuttering</value>
+  </data>
+  <data name="facts_para_1_1" xml:space="preserve">
+    <value>Stutters can </value>
+  </data>
+  <data name="facts_para_1_2" xml:space="preserve">
+    <value>learn to overcome </value>
+  </data>
+  <data name="facts_para_1_3" xml:space="preserve">
+    <value>stuttering</value>
+  </data>
+  <data name="facts_para_2_1" xml:space="preserve">
+    <value>Most stutterers </value>
+  </data>
+  <data name="facts_para_2_2" xml:space="preserve">
+    <value>don’t stutter when alone </value>
+  </data>
+  <data name="facts_para_2_3" xml:space="preserve">
+    <value>as they feel relaxed and focused and all brain resources are directed towards speech but among people the stuation is difficult. They feel stressed leading to stuttering </value>
+  </data>
+  <data name="facts_para_3_1" xml:space="preserve">
+    <value>There are </value>
+  </data>
+  <data name="facts_para_3_2" xml:space="preserve">
+    <value>situations when people don’t stutter </value>
+  </data>
+  <data name="facts_para_3_3" xml:space="preserve">
+    <value>like singing, speaking in unison with people or whispiring while speaking on phone, talking to a stranger or public speaking may enhance the stuttering.</value>
+  </data>
+  <data name="facts_para_4_1" xml:space="preserve">
+    <value>There are many </value>
+  </data>
+  <data name="facts_para_4_2" xml:space="preserve">
+    <value>famous people </value>
+  </data>
+  <data name="facts_para_4_3" xml:space="preserve">
+    <value>including ators scientists, musicians and politicians who stutter such as US President Joe Biden, Marilyn Monroe, James Earl Jones, Emily Blunt, Shaquille O’Neal, Darwin, Whinston Churchill. Actor Hiritik Karoshan and Rani Mukharji.</value>
+  </data>
+  <data name="hierarchy_heading" xml:space="preserve">
+    <value>Hierarchy</value>
+  </data>
+  <data name="hold_1" xml:space="preserve">
+    <value>Hold 1</value>
+  </data>
+  <data name="hold_2" xml:space="preserve">
+    <value>Hold 2</value>
+  </data>
+  <data name="hold_on" xml:space="preserve">
+    <value>Hold On</value>
+  </data>
+  <data name="inhale" xml:space="preserve">
+    <value>Inhale</value>
+  </data>
+  <data name="instructions" xml:space="preserve">
+    <value>Instructions</value>
+  </data>
+  <data name="journey_heading" xml:space="preserve">
+    <value>The Journey</value>
+  </data>
+  <data name="language" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="lets_move" xml:space="preserve">
+    <value>Let's move on to some</value>
+  </data>
+  <data name="management_heading" xml:space="preserve">
+    <value>Management</value>
+  </data>
+  <data name="management_para" xml:space="preserve">
+    <value>Treatment is most helpful when it focuses on more than just fluent speech. Since stuttering is more than just stuttering, treatment for stuttering should address more than just the observable speech disfluencies. Addressing the whole disorder is the key to helping people reduce the impact of stuttering on their lives Most people who stutter can speak without stuttering when they talk to themselves and when they sing or speak in unison with someone else, when they focus on more than just fluent speech and practice it more and more as they can.</value>
+  </data>
+  <data name="menu_assessment_close" xml:space="preserve">
+    <value>Self Assessment     -</value>
+  </data>
+  <data name="menu_assessment_open" xml:space="preserve">
+    <value>Self Assessment     +</value>
+  </data>
+  <data name="menu_breathing" xml:space="preserve">
+    <value>&gt; Breathing Exercises</value>
+  </data>
+  <data name="menu_evaluation" xml:space="preserve">
+    <value>&gt; Self Evaluation of Fluency</value>
+  </data>
+  <data name="menu_exit" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="menu_flexible" xml:space="preserve">
+    <value>&gt; Flexible rate of speech</value>
+  </data>
+  <data name="menu_management_close" xml:space="preserve">
+    <value>Self Management    -</value>
+  </data>
+  <data name="menu_management_open" xml:space="preserve">
+    <value>Self Management    +</value>
+  </data>
+  <data name="menu_onset" xml:space="preserve">
+    <value>&gt; Easy Onset</value>
+  </data>
+  <data name="menu_rater" xml:space="preserve">
+    <value>&gt; Stutter Rater</value>
+  </data>
+  <data name="menu_rating" xml:space="preserve">
+    <value>&gt; Self Rating of Stuttering</value>
+  </data>
+  <data name="menu_settings" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="mostly" xml:space="preserve">
+    <value>Mostly</value>
+  </data>
+  <data name="motivaional_para_1" xml:space="preserve">
+    <value>The one thing I’ve learned is that stuttering in public is never as bad as I fear it will be (John Stossel)</value>
+  </data>
+  <data name="motivaional_para_2" xml:space="preserve">
+    <value>Keep in mind that… the less you avoid words and situations, the less you will stutter in the long run (J.D. Williams)</value>
+  </data>
+  <data name="motivaional_para_3" xml:space="preserve">
+    <value>Stuttering is ok because what I have to say is worth repeating (Anonymous)</value>
+  </data>
+  <data name="motivaional_para_4" xml:space="preserve">
+    <value>I think that’s why I put my energy in making the Music (Kendrick Lamar)</value>
+  </data>
+  <data name="motivaional_para_5" xml:space="preserve">
+    <value>Learning how to help yourself should be the goal of every stutter (Malcom Fraser)</value>
+  </data>
+  <data name="motivational_heading" xml:space="preserve">
+    <value>Motivational Quotes</value>
+  </data>
+  <data name="never" xml:space="preserve">
+    <value>Never</value>
+  </data>
+  <data name="nothing_heading" xml:space="preserve">
+    <value>Nothing is Wrong with Stutters</value>
+  </data>
+  <data name="nothing_para" xml:space="preserve">
+    <value>People aren’t doing anything wrong when they stutter; they are simply trying to talk, just like anyone else would do. If they feel embarrassed about their speech or ashamed of being different, then they are more likely to struggle with speaking or try to avoid talking. This makes the problem worse and increases the impact of the disorder. When people know that it is okay to stutter, then they can communicate more freely and more easily. They can say what they want to say, even if they sometimes say it disfluently. Thus, acceptance of stuttering is the key to successful communication</value>
+  </data>
+  <data name="occasionaly" xml:space="preserve">
+    <value>Occasionaly</value>
+  </data>
+  <data name="often" xml:space="preserve">
+    <value>Often</value>
+  </data>
+  <data name="ok" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="overview" xml:space="preserve">
+    <value>Stuttering Overview</value>
+  </data>
+  <data name="overview_definition" xml:space="preserve">
+    <value>Stuttering is a speech disorder that involves frequent and significant problems with normal fluency and flow of speech.</value>
+  </data>
+  <data name="rater_inst_d" xml:space="preserve">
+    <value>Press D button when you stutter while speaking</value>
+  </data>
+  <data name="rater_inst_reset" xml:space="preserve">
+    <value>Press RESET button to reset the timer and record</value>
+  </data>
+  <data name="rater_inst_s" xml:space="preserve">
+    <value>Press S button when you spoke a syllable</value>
+  </data>
+  <data name="rater_inst_start" xml:space="preserve">
+    <value>Press START button to start the timer</value>
+  </data>
+  <data name="rater_inst_stop" xml:space="preserve">
+    <value>Press STOP button to stop the timer</value>
+  </data>
+  <data name="save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="secs" xml:space="preserve">
+    <value>Secs</value>
+  </data>
+  <data name="self_eva_q1" xml:space="preserve">
+    <value>How Fluent was I?</value>
+  </data>
+  <data name="self_eva_q2" xml:space="preserve">
+    <value>How often did these features occur in my speech?
+•	Repitition
+•	Blockage
+•	Hesitation
+•	Prolongation</value>
+  </data>
+  <data name="self_eva_q3" xml:space="preserve">
+    <value>How often did I use slowed speech?</value>
+  </data>
+  <data name="self_eva_q4" xml:space="preserve">
+    <value>How effective was my communication?</value>
+  </data>
+  <data name="self_eva_q5" xml:space="preserve">
+    <value>Were there any obstacles in communicating effectively?</value>
+  </data>
+  <data name="self_eva_q6" xml:space="preserve">
+    <value>Was there neck stiffness during my speech?</value>
+  </data>
+  <data name="self_eva_q7" xml:space="preserve">
+    <value>Have I observed rapid eye blinking, jaw jerking, foot taping and/or  other involuntary movements during the speech?</value>
+  </data>
+  <data name="self_rating_instruction" xml:space="preserve">
+    <value>1 will be considered as less rate of suttering and 10 as severe intensity</value>
+  </data>
+  <data name="self_rating_q" xml:space="preserve">
+    <value>Rate your stuttering intensity on the scale from 1 – 10</value>
+  </data>
+  <data name="settings" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="set_time" xml:space="preserve">
+    <value>Set time duration</value>
+  </data>
+  <data name="start" xml:space="preserve">
+    <value>START</value>
+  </data>
+  <data name="start_stutter" xml:space="preserve">
+    <value>Please start the stutter rater first!</value>
+  </data>
+  <data name="stop_stutter" xml:space="preserve">
+    <value>Please stop the stutter rater first!</value>
+  </data>
+  <data name="title_assessment" xml:space="preserve">
+    <value>Self Assessment</value>
+  </data>
+  <data name="title_breathing" xml:space="preserve">
+    <value>Breathing Exercises</value>
+  </data>
+  <data name="title_evaluation" xml:space="preserve">
+    <value>Self Evaluation of Fluency</value>
+  </data>
+  <data name="title_flexible" xml:space="preserve">
+    <value>Flexible rate of speech</value>
+  </data>
+  <data name="title_management" xml:space="preserve">
+    <value>سیلف مینجمنٹ</value>
+  </data>
+  <data name="title_onset" xml:space="preserve">
+    <value>Easy Onset</value>
+  </data>
+  <data name="title_rater" xml:space="preserve">
+    <value>Stutter Rater</value>
+  </data>
+  <data name="title_rating" xml:space="preserve">
+    <value>Self Rating of Stuttering</value>
+  </data>
+  <data name="title_settings" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="total" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="triggers_heading" xml:space="preserve">
+    <value>Triggers of Stuttering</value>
+  </data>
+  <data name="triggers_para" xml:space="preserve">
+    <value>Stuttering may be worse when the person is excited, tired or under stress, or when feeling self-conscious, hurried or pressured. Certain situations such as speaking in front of a group or talking on the phone can be particularly difficult for people who stutter.</value>
+  </data>
+  <data name="urdu" xml:space="preserve">
+    <value>Urdu</value>
+  </data>
+  <data name="varies_heading" xml:space="preserve">
+    <value>Stuttering Varies</value>
+  </data>
+  <data name="varies_para" xml:space="preserve">
+    <value>People do not stutter the same way or the same amount in all situations. Variability can also confuse parents, teachers, and peers, for they may wonder why a person is fluent in one situation but struggles in another. It is not because the speaker is not trying hard enough; it is just because stuttering varies.</value>
+  </data>
+</root>

@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Stuttering.Views.Settings" >
+    <ContentView.Content>
+        <Grid>
+            <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="White"
+                     Spacing="10" Padding="10,0">
+                <Frame HorizontalOptions="FillAndExpand">
+                    <StackLayout>
+                        <Label Text="Self Management" FontSize="Medium" TextDecorations="Underline" HorizontalTextAlignment="Center"/>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Breathing exercise" FontSize="Medium" VerticalTextAlignment="Center"/>
+                            <Label Text="" HorizontalOptions="EndAndExpand" FontSize="14"
+                               TextColor="{StaticResource Primary}" HorizontalTextAlignment="Center">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="{Binding BreathDate}"/>
+                                        <Span Text="&#10;"/>
+                                        <Span Text="{Binding BreathTime}"/>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </StackLayout>
+                        <BoxView BackgroundColor="LightGray" HorizontalOptions="FillAndExpand" HeightRequest="1"/>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Flexible rate of speech" FontSize="Medium" VerticalTextAlignment="Center"/>
+                            <Label Text="" HorizontalOptions="EndAndExpand" FontSize="14"
+                               TextColor="{StaticResource Primary}" HorizontalTextAlignment="Center">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Chapter 0"/>
+                                        <Span Text="&#10;"/>
+                                        <Span Text="Level 0"/>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </StackLayout>
+                        <BoxView BackgroundColor="LightGray" HorizontalOptions="FillAndExpand" HeightRequest="1"/>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Easy Onset" FontSize="Medium" VerticalTextAlignment="Center"/>
+                            <Label Text="" HorizontalOptions="EndAndExpand" FontSize="14"
+                               TextColor="{StaticResource Primary}" HorizontalTextAlignment="Center">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Chapter 0"/>
+                                        <Span Text="&#10;"/>
+                                        <Span Text="Level 0"/>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+                <Frame HorizontalOptions="FillAndExpand">
+                    <StackLayout>
+                        <Label Text="Self Assessment" FontSize="Medium" TextDecorations="Underline" HorizontalTextAlignment="Center"/>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Self rating" FontSize="Medium" VerticalTextAlignment="Center"/>
+                            <Label Text="Stats" HorizontalOptions="EndAndExpand" FontSize="14"
+                               TextColor="{StaticResource Primary}" HorizontalTextAlignment="Center"
+                                   TextDecorations="Underline" VerticalOptions="CenterAndExpand">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding RatingStatsCommand}"/>
+                                </Label.GestureRecognizers>
+                            </Label>
+                        </StackLayout>
+                        <BoxView BackgroundColor="LightGray" HorizontalOptions="FillAndExpand" HeightRequest="1"/>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Self evaluation" FontSize="Medium" VerticalTextAlignment="Center"/>
+                            <Label Text="Stats" HorizontalOptions="EndAndExpand" FontSize="14"
+                               TextColor="{StaticResource Primary}" HorizontalTextAlignment="Center"
+                                   TextDecorations="Underline" VerticalOptions="CenterAndExpand">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding EvaStatsCommand}"/>
+                                </Label.GestureRecognizers>
+                            </Label>
+                        </StackLayout>
+                        <BoxView BackgroundColor="LightGray" HorizontalOptions="FillAndExpand" HeightRequest="1"/>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Stutter rater" FontSize="Medium" VerticalTextAlignment="Center"/>
+                            <Label Text="Stats" HorizontalOptions="EndAndExpand" FontSize="14"
+                               TextColor="{StaticResource Primary}" HorizontalTextAlignment="Center"
+                                   TextDecorations="Underline" VerticalOptions="CenterAndExpand">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding RaterStatsCommand}"/>
+                                </Label.GestureRecognizers>
+                            </Label>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+                <Frame HorizontalOptions="FillAndExpand">
+                    <StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Language" FontSize="Medium" HorizontalOptions="StartAndExpand"
+                                   VerticalTextAlignment="Center" />
+                            <Picker ItemsSource="{Binding LanguagesList}" ItemDisplayBinding="{Binding DisplayName}"
+                                SelectedItem="{Binding SelectedLanguage}" Title="Language" HorizontalTextAlignment="Center"/>
+                        </StackLayout>
+                        <Grid>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Lock" FontSize="Medium"/>
+                                <Switch x:Name="PatternSwitch" IsToggled="{Binding IsLockEnabled}" 
+                                HorizontalOptions="EndAndExpand" ThumbColor="{StaticResource Primary}"
+                                OnColor="MediumSeaGreen"/>
+                            </StackLayout>
+                            <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding SwitchCommand}"/>
+                                </StackLayout.GestureRecognizers>
+                            </StackLayout>
+                        </Grid>
+                        <StackLayout Orientation="Horizontal" IsVisible="{Binding IsLockEnabled}">
+                            <Label Text="Lock Type" FontSize="Medium" HorizontalOptions="StartAndExpand"
+                                   VerticalTextAlignment="Center" />
+                            <Picker ItemsSource="{Binding LockTypesList}" WidthRequest="70"
+                                SelectedItem="{Binding SelectedLockType}" Title="Lock Type" HorizontalTextAlignment="Center"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Button Text="Change Pin" x:Name="pinBtn" HorizontalOptions="CenterAndExpand"
+                    IsVisible="{Binding IsLockEnabled}" Command="{Binding ChangePinCommand}"
+                                     Style="{StaticResource GnrBtn}"/>
+                            <Button Text="Change Pattern" x:Name="patternBtn" HorizontalOptions="CenterAndExpand"
+                    IsVisible="{Binding IsPatternLockEnabled}" Command="{Binding ChangePatternCommand}"
+                                     Style="{StaticResource GnrBtn}"/>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+                
+
+            </StackLayout>
+            <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="White"
+                         IsVisible="{Binding IsBusy}">
+                <Image Source="busy.gif" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
+                       IsAnimationPlaying="True" />
+            </StackLayout>
+        </Grid>
+    </ContentView.Content>
+</ContentView>

@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Stuttering.Views.StutteringOverviewPage"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:i18n="clr-namespace:Stuttering.Helper;assembly=Stuttering"
+             x:Name="StutteringOverview">
+    <!--<ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add" Command="{Binding AddItemCommand}" />
+    </ContentPage.ToolbarItems>-->
+    <!--
+      x:DataType enables compiled bindings for better performance and compile time validation of binding expressions.
+      https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/data-binding/compiled-bindings
+    -->
+    <ContentView Padding="10">
+        
+        <ScrollView>
+            <StackLayout Spacing="10">
+                <Label Text="{i18n:Translate overview_definition}" 
+                   Padding="10" TextColor="Black"
+                   FontSize="Medium" HorizontalTextAlignment="Center"/>
+               
+                <Frame Padding="0" BorderColor="#00AFB6" CornerRadius="7">
+                    <xct:Expander x:Name="triggers">
+                        <xct:Expander.Header>
+                            <Label Text="{i18n:Translate triggers_heading}" TextColor="White"
+                               FontAttributes="Bold" Padding="10"
+                               FontSize="Medium" BackgroundColor="#00AFB6"/>
+                        </xct:Expander.Header>
+                        <xct:Expander.Content>
+                            <Label Text="{i18n:Translate triggers_para}"
+                               FontAttributes="Italic" Padding="10,7,10,10" FontSize="Subtitle" TextColor="Black"/>
+                        </xct:Expander.Content>
+                    </xct:Expander>
+                </Frame>
+
+                <Frame Padding="0" BorderColor="#00AFB6" CornerRadius="7">
+                    <xct:Expander x:Name="emotional">
+                        <xct:Expander.Header>
+                            <Label Text="{i18n:Translate emotional_heading}" TextColor="White"
+                               FontAttributes="Bold" Padding="10"
+                               FontSize="Medium" BackgroundColor="#00AFB6"/>
+                        </xct:Expander.Header>
+                        <xct:Expander.Content>
+                            <Label Text="{i18n:Translate emotional_para}"
+                               FontAttributes="Italic" Padding="10,7,10,10" FontSize="Subtitle" TextColor="Black"/>
+                        </xct:Expander.Content>
+                    </xct:Expander>
+                </Frame>
+
+                <Frame Padding="0" BorderColor="#00AFB6" CornerRadius="7">
+                    <xct:Expander x:Name="varies">
+                        <xct:Expander.Header>
+                            <Label Text="{i18n:Translate varies_heading}" TextColor="White"
+                               FontAttributes="Bold" Padding="10"
+                               FontSize="Medium" BackgroundColor="#00AFB6"/>
+                        </xct:Expander.Header>
+                        <xct:Expander.Content>
+                            <Label Text="{i18n:Translate varies_para}"
+                               FontAttributes="Italic" Padding="10,7,10,10" FontSize="Subtitle" TextColor="Black"/>
+                        </xct:Expander.Content>
+                    </xct:Expander>
+                </Frame>
+
+                <Frame Padding="0" BorderColor="#00AFB6" CornerRadius="7">
+                    <xct:Expander x:Name="nothing">
+                        <xct:Expander.Header>
+                            <Label Text="{i18n:Translate nothing_heading}" TextColor="White"
+                               FontAttributes="Bold" Padding="10"
+                               FontSize="Medium" BackgroundColor="#00AFB6"/>
+                        </xct:Expander.Header>
+                        <xct:Expander.Content>
+                            <Label Text="{i18n:Translate nothing_para}"
+                               FontAttributes="Italic" Padding="10,7,10,10" FontSize="Subtitle" TextColor="Black"/>
+                        </xct:Expander.Content>
+                    </xct:Expander>
+                </Frame>
+
+                <Frame Padding="0" BorderColor="#00AFB6" CornerRadius="7">
+                    <xct:Expander x:Name="management">
+                        <xct:Expander.Header>
+                            <Label Text="{i18n:Translate management_heading}" TextColor="White"
+                               FontAttributes="Bold" Padding="10"
+                               FontSize="Medium" BackgroundColor="#00AFB6"/>
+                        </xct:Expander.Header>
+                        <xct:Expander.Content>
+                            <Label Text="{i18n:Translate management_para}"
+                               FontAttributes="Italic" Padding="10,7,10,10" FontSize="Subtitle" TextColor="Black"/>
+                        </xct:Expander.Content>
+                    </xct:Expander>
+                </Frame>
+
+                <Frame Padding="0" BorderColor="#00AFB6" CornerRadius="7">
+                    <xct:Expander x:Name="facts">
+                        <xct:Expander.Header>
+                            <Label Text="{i18n:Translate facts_heading}" TextColor="White"
+                               FontAttributes="Bold" Padding="10"
+                               FontSize="Medium" BackgroundColor="#00AFB6"/>
+                        </xct:Expander.Header>
+                        <xct:Expander.Content>
+                            <Label FontAttributes="Italic" Padding="10,7,10,10" FontSize="Subtitle" TextColor="Black">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="•	" FontAttributes="Bold" TextColor="Black" FontSize="Large"/>
+                                        <Span Text="{i18n:Translate facts_para_1_1}"/>
+                                        <Span Text="{i18n:Translate facts_para_1_2}" FontAttributes="Bold"/>
+                                        <Span Text="{i18n:Translate facts_para_1_3}"/>
+                                        <Span Text="&#10;"/>
+                                        <Span Text="•	" FontAttributes="Bold" TextColor="Black" FontSize="Large"/>
+                                        <Span Text="{i18n:Translate facts_para_2_1}"/>
+                                        <Span Text="{i18n:Translate facts_para_2_2}" FontAttributes="Bold"/>
+                                        <Span Text="{i18n:Translate facts_para_2_3}"/>
+                                        <Span Text="&#10;"/>
+                                        <Span Text="•	" FontAttributes="Bold" TextColor="Black" FontSize="Large"/>
+                                        <Span Text="{i18n:Translate facts_para_3_1}"/>
+                                        <Span Text="{i18n:Translate facts_para_3_2}" FontAttributes="Bold"/>
+                                        <Span Text="{i18n:Translate facts_para_3_3}"/>
+                                        <Span Text="&#10;"/>
+                                        <Span Text="•	" FontAttributes="Bold" TextColor="Black" FontSize="Large"/>
+                                        <Span Text="{i18n:Translate facts_para_4_1}"/>
+                                        <Span Text="{i18n:Translate facts_para_4_2}" FontAttributes="Bold"/>
+                                        <Span Text="{i18n:Translate facts_para_4_3}"/>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </xct:Expander.Content>
+                    </xct:Expander>
+                </Frame>
+
+                <Frame Padding="0" BorderColor="#00AFB6" CornerRadius="7" >
+                    <xct:Expander x:Name="motivational">
+                        <xct:Expander.Header>
+                            <Label Text="{i18n:Translate motivational_heading}" TextColor="White"
+                               FontAttributes="Bold" Padding="10"
+                               FontSize="Medium" BackgroundColor="#00AFB6"/>
+                        </xct:Expander.Header>
+                        <xct:Expander.Content>
+                            <Label FontAttributes="Italic" Padding="10,7,10,10" FontSize="Subtitle" TextColor="Black">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="•	" FontAttributes="Bold" TextColor="Black" FontSize="Large"/>
+                                        <Span Text="{i18n:Translate motivaional_para_1}"/>
+                                        <Span Text="&#10;"/>
+                                        <Span Text="•	" FontAttributes="Bold" TextColor="Black" FontSize="Large"/>
+                                        <Span Text="{i18n:Translate motivaional_para_2}"/>
+                                        <Span Text="&#10;"/>
+                                        <Span Text="•	" FontAttributes="Bold" TextColor="Black" FontSize="Large"/>
+                                        <Span Text="{i18n:Translate motivaional_para_3}"/>
+                                        <Span Text="&#10;"/>
+                                        <Span Text="•	" FontAttributes="Bold" TextColor="Black" FontSize="Large"/>
+                                        <Span Text="{i18n:Translate motivaional_para_4}"/>
+                                        <Span Text="&#10;"/>
+                                        <Span Text="•	" FontAttributes="Bold" TextColor="Black" FontSize="Large"/>
+                                        <Span Text="{i18n:Translate motivaional_para_5}"/>
+                                        <Span Text="&#10;"/>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </xct:Expander.Content>
+                    </xct:Expander>
+                </Frame>
+
+                <Frame Padding="0" BorderColor="#00AFB6" CornerRadius="7">
+                    <xct:Expander x:Name="journey">
+                        <xct:Expander.Header>
+                            <Label Text="{i18n:Translate journey_heading}" TextColor="White"
+                               FontAttributes="Bold" Padding="10"
+                               FontSize="Medium" BackgroundColor="#00AFB6"/>
+                        </xct:Expander.Header>
+                        <xct:Expander.Content>
+                            <Image Source="journey.png" HorizontalOptions="FillAndExpand" Margin="5"/>
+                        </xct:Expander.Content>
+                    </xct:Expander>
+                </Frame>
+
+                <Frame Padding="0" BorderColor="#00AFB6" CornerRadius="7">
+                    <xct:Expander x:Name="hierarchy">
+                        <xct:Expander.Header>
+                            <Label Text="{i18n:Translate hierarchy_heading}" TextColor="White"
+                               FontAttributes="Bold" Padding="10"
+                               FontSize="Medium" BackgroundColor="#00AFB6"/>
+                        </xct:Expander.Header>
+                        <xct:Expander.Content>
+                            <Image Source="hierarchy.png" HorizontalOptions="FillAndExpand" Margin="5"/>
+                        </xct:Expander.Content>
+                    </xct:Expander>
+                </Frame>
+            </StackLayout>
+        </ScrollView>
+    </ContentView>
+    <!--<RefreshView x:DataType="local:StutteringOverviewViewModel" Command="{Binding LoadItemsCommand}" IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
+        <CollectionView x:Name="ItemsListView"
+                ItemsSource="{Binding Items}"
+                SelectionMode="None">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout Padding="10" x:DataType="model1:StutterReadItem">
+                        <Label Text="{Binding Label}" 
+                            LineBreakMode="NoWrap" 
+                            Style="{DynamicResource ListItemTextStyle}" 
+                            FontSize="16" />
+                        --><!--<Label Text="{Binding Description}" 
+                            LineBreakMode="NoWrap"
+                            Style="{DynamicResource ListItemDetailTextStyle}"
+                            FontSize="13" />--><!--
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer 
+                                NumberOfTapsRequired="1"
+                                Command="{Binding Source={RelativeSource AncestorType={x:Type local:StutteringOverviewViewModel}}, Path=ItemTapped}"		
+                                CommandParameter="{Binding .}">
+                            </TapGestureRecognizer>
+                        </StackLayout.GestureRecognizers>
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </RefreshView>-->
+</ContentView>

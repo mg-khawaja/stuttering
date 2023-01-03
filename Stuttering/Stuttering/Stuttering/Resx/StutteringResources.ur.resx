@@ -1,0 +1,449 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="10_min" xml:space="preserve">
+    <value>10 منٹ</value>
+  </data>
+  <data name="1_min" xml:space="preserve">
+    <value>1 منٹ</value>
+  </data>
+  <data name="2_min" xml:space="preserve">
+    <value>2 منٹ</value>
+  </data>
+  <data name="3_min" xml:space="preserve">
+    <value>3 منٹ</value>
+  </data>
+  <data name="4_min" xml:space="preserve">
+    <value>4 منٹ</value>
+  </data>
+  <data name="5_min" xml:space="preserve">
+    <value>5 منٹ</value>
+  </data>
+  <data name="6_min" xml:space="preserve">
+    <value>6 منٹ</value>
+  </data>
+  <data name="7_min" xml:space="preserve">
+    <value>7 منٹ</value>
+  </data>
+  <data name="8_min" xml:space="preserve">
+    <value>8 منٹ</value>
+  </data>
+  <data name="9_min" xml:space="preserve">
+    <value>9 منٹ</value>
+  </data>
+  <data name="attempt" xml:space="preserve">
+    <value>براہ کرم سوال کا جواب دیں!</value>
+  </data>
+  <data name="attempt_all" xml:space="preserve">
+    <value>براہ کرم تمام سوالوں کے جواب دیں!</value>
+  </data>
+  <data name="breathing_practice" xml:space="preserve">
+    <value>مشق کرتے ہیں</value>
+  </data>
+  <data name="breath_in" xml:space="preserve">
+    <value>سانس لیں</value>
+  </data>
+  <data name="breath_out" xml:space="preserve">
+    <value>سانس چھوڑیں</value>
+  </data>
+  <data name="chapters" xml:space="preserve">
+    <value>ابواب</value>
+  </data>
+  <data name="emotional_heading" xml:space="preserve">
+    <value>جذباتی ردِعمل</value>
+  </data>
+  <data name="emotional_para" xml:space="preserve">
+    <value>ہکلاہٹ کرنے والے افراد مختلف منفی جذبات کا تجربہ کرتے ہیں۔ان منفی جذبات میں شرمندگی  اور بےچینی  شامل ہیں جنکی وجہ سے انہیں بولنے کے دوران تناؤ اورجدوجہد کاسامناکرناپڑتا ہے۔ اسکے باعث بعض اوقات وہ زیادہ گفتگوسے اجتناب کرتے ہیں</value>
+  </data>
+  <data name="english" xml:space="preserve">
+    <value>انگریزی</value>
+  </data>
+  <data name="error" xml:space="preserve">
+    <value>خرابی</value>
+  </data>
+  <data name="exhale" xml:space="preserve">
+    <value>سانس چھوڑیں</value>
+  </data>
+  <data name="facts_heading" xml:space="preserve">
+    <value>ہکلاہٹ کے حقائق </value>
+  </data>
+  <data name="facts_para_1_1" xml:space="preserve">
+    <value>ہکلانے والے افراد </value>
+  </data>
+  <data name="facts_para_1_2" xml:space="preserve">
+    <value>ہکلاہٹ پرقابو </value>
+  </data>
+  <data name="facts_para_1_3" xml:space="preserve">
+    <value>پانا سیکھ سکتے ہیں </value>
+  </data>
+  <data name="facts_para_2_1" xml:space="preserve">
+    <value>ہکلانے والے زیادہ ترافراد </value>
+  </data>
+  <data name="facts_para_2_2" xml:space="preserve">
+    <value>اکیلے میں نہیں ہکلاتے </value>
+  </data>
+  <data name="facts_para_2_3" xml:space="preserve">
+    <value>ہکلاتے کیونکہ وہ باآسانی اپنی توجہ بولنے پرمرکوز کر سکتے ہیں لیکن جب وہ لوگوں کے درمیان ہوتے ہیں تو توجہ مرکوز کرنا مشکل ہوتاہے اوروہ تناؤ محسوس کرتے ہیں جسکے نتیجے میں وہ ہکلاتے ہیں </value>
+  </data>
+  <data name="facts_para_3_1" xml:space="preserve">
+    <value> کچھ صورتِ حال میں ہکلانے والے افراد کو</value>
+  </data>
+  <data name="facts_para_3_2" xml:space="preserve">
+    <value> ہکلاہٹ نہیں ہوتی</value>
+  </data>
+  <data name="facts_para_3_3" xml:space="preserve">
+    <value>جیسا کہ گانا گاتے ہوئے،لوگوں کے ساتھ ہم آہنگی میں بولتے ہوئے، سرگوشی میں بولتے ہوئے یا فون پربات کرتے ہوئے البتہ کسی اجنبی سے بات کرنایا عوامی سطح پربولنا ہکلاہٹ کو بڑھا سکتا ہے </value>
+  </data>
+  <data name="facts_para_4_1" xml:space="preserve">
+    <value>بہت سے </value>
+  </data>
+  <data name="facts_para_4_2" xml:space="preserve">
+    <value>مشہورلوگ ہکلاتے ہیں </value>
+  </data>
+  <data name="facts_para_4_3" xml:space="preserve">
+    <value>جن میں اداکار،موسیقار، سائینسدان اور سیاستدان شامل ہیں۔مثلاً امریکہ کے صدر جو بائیڈن، مارلن منرو، جیمز ارل جانز، ایملی بلنٹ، شکیلے او نیل، ڈارون،ونسٹن چرچل اور اداکاررانی مکھرجی اورہریتکروشن شامل ہیں </value>
+  </data>
+  <data name="hierarchy_heading" xml:space="preserve">
+    <value>درجہ بندی</value>
+  </data>
+  <data name="hold_1" xml:space="preserve">
+    <value>سانس روکیں 1</value>
+  </data>
+  <data name="hold_2" xml:space="preserve">
+    <value>سانس روکیں 2</value>
+  </data>
+  <data name="hold_on" xml:space="preserve">
+    <value>سانس روکیں</value>
+  </data>
+  <data name="inhale" xml:space="preserve">
+    <value>سانس لیں</value>
+  </data>
+  <data name="instructions" xml:space="preserve">
+    <value>ہدایات</value>
+  </data>
+  <data name="journey_heading" xml:space="preserve">
+    <value>سفر</value>
+  </data>
+  <data name="language" xml:space="preserve">
+    <value>زبان</value>
+  </data>
+  <data name="lets_move" xml:space="preserve">
+    <value>آئیے سانس لینے کی کچھ</value>
+  </data>
+  <data name="management_heading" xml:space="preserve">
+    <value>نظم ونسق</value>
+  </data>
+  <data name="management_para" xml:space="preserve">
+    <value>ہکلاہٹ کا علاج اس وقت زیادہ موثر ہوتا ہے جب توجہ صرف بولنے کی روانی پرمرکوز کی جائے۔چونکہ ہکلاہٹ بولنے میں روانی کی خرابی ہے لہذا توجہ بھی روانی میں بولنے کے دوران ہونے والی خرابیوں پرمرکوزکرنی چاہیے۔اس عارضے کو دورکرنالوگوں کی زندگی پرہونے والے منفی اثرات کو کم کرتا ہے۔بہت سے لوگ جوہکلاتے ہیں وہ گاناگانے کے دوران،خود کلامی اور کسی دوسرے کے ساتھ مل کر بولتے ہوئے کم ہکلاتے ہیں۔ جب وہ اپنی توجہ صرف روانی کے ساتھ بولنے پر مرکوز کرتے ہیں اور جتنا ہو سکے زیادہ سے زیادہ مشق کرتے  ہیں</value>
+  </data>
+  <data name="menu_assessment_close" xml:space="preserve">
+    <value>خود  تشخیص     -</value>
+  </data>
+  <data name="menu_assessment_open" xml:space="preserve">
+    <value>خود  تشخیص     +</value>
+  </data>
+  <data name="menu_breathing" xml:space="preserve">
+    <value>&gt; سانس لینے کی مشقیں</value>
+  </data>
+  <data name="menu_evaluation" xml:space="preserve">
+    <value>&gt; بولنے میں روانی کا جائزہ</value>
+  </data>
+  <data name="menu_exit" xml:space="preserve">
+    <value>باہر نکلیں</value>
+  </data>
+  <data name="menu_flexible" xml:space="preserve">
+    <value>&gt; روانی سے بولنے کی شرح</value>
+  </data>
+  <data name="menu_management_close" xml:space="preserve">
+    <value>سیلف مینجمنٹ     -</value>
+  </data>
+  <data name="menu_management_open" xml:space="preserve">
+    <value>سیلف مینجمنٹ     +</value>
+  </data>
+  <data name="menu_onset" xml:space="preserve">
+    <value>&gt; آسان بات چیت کا آغاز</value>
+  </data>
+  <data name="menu_rater" xml:space="preserve">
+    <value>&gt; ہکلانے  کی فیصد میں درجہ بندی</value>
+  </data>
+  <data name="menu_rating" xml:space="preserve">
+    <value>&gt; ہکلانے کی خود درجہ بندی</value>
+  </data>
+  <data name="menu_settings" xml:space="preserve">
+    <value>ترتیبات</value>
+  </data>
+  <data name="mostly" xml:space="preserve">
+    <value>زیادہ تر</value>
+  </data>
+  <data name="motivaional_para_1" xml:space="preserve">
+    <value>ایک چیز جومیں نے سیکھی ہے وہ یہ ہے کہ عوام میں ہکلانااتنابھی برا نہیں ہے جتنا کہ مجھے ڈر تھا کہ ایسا ہو گا۔(جان سٹوسل)</value>
+  </data>
+  <data name="motivaional_para_2" xml:space="preserve">
+    <value>ذہن میں رکھیں کہ جتنا آپ الفاظ اور حالات سے کم گریز کریں گے اتنا ہی آپ کم ہکلائیں گے۔(جے ڈی ولیمز)</value>
+  </data>
+  <data name="motivaional_para_3" xml:space="preserve">
+    <value>ذہن میں رکھیں کہ جتنا آپ الفاظ اور حالات سے کم گریز کریں گے اتنا ہی آپ کم ہکلائیں گے۔(جے ڈی ولیمز)
+۔ہکلانا ٹھیک ہے کیونکہ جومجھے کہنا ہے وہ دوہرانے کے قابل ہے۔(اجنبی)</value>
+  </data>
+  <data name="motivaional_para_4" xml:space="preserve">
+    <value>مجھے لگتا ہے کہ ہکلاہٹ کی وجہ سے ہی میں اپنی توانا ئی موسیقی بنانے میں لگاتا ہوں۔(کینڈرک لامر)</value>
+  </data>
+  <data name="motivaional_para_5" xml:space="preserve">
+    <value>اپنی مدد کرنے کاطریقہ سیکھنا ہرہکلانے والے کامقصد ہونا چاہیے۔(میلکوم فریزر)</value>
+  </data>
+  <data name="motivational_heading" xml:space="preserve">
+    <value>تحریکی اقتسابات</value>
+  </data>
+  <data name="never" xml:space="preserve">
+    <value>کبھی نہیں</value>
+  </data>
+  <data name="nothing_heading" xml:space="preserve">
+    <value>ہکلاہٹ میں کچھ غلط نہیں ہے</value>
+  </data>
+  <data name="nothing_para" xml:space="preserve">
+    <value>لوگ جب ہکلاتے ہیں تو دراصل وہ کچھ غلط نہیں کررہے ہوتے بلکہ وہ عام لوگوں کی طرح بات کرنے  کی کو شش کر رہے ہوتے ہیں۔اگر وہ اپنی ہکلاہٹ پر شرمندگی محسوس کریں تو انہیں بولنے میں مشکل کاسامنا کرنا پڑتا ہے۔ اس سے انہیں شرمندگی محسوس ہوتی ہے اور بولنے میں مذید خرابی کا سامنا کرنا پڑتا ہے۔آخر کاروہ بات کرنے سے بچنے کی کوشش کرنے لگتے ہیں۔البتہ جب انہیں یہ یقین دلایا جائے کہ ہکلانا ٹھیک ہے تو وہ زیادہ آزادانہ اور آسانی سے بات چیت کرنے کے قابل ہوسکتے ہیں۔ وہ آسانی سے وہ سب کچھ کہہ سکتے ہیں جووہ کہنا چاہتے ہیں۔بلاشبہ ہکلاہٹ کو تسلیم کرنا ہی کامیاب بات چیت کی کنجی ہے</value>
+  </data>
+  <data name="occasionaly" xml:space="preserve">
+    <value>کبھی کبھار</value>
+  </data>
+  <data name="often" xml:space="preserve">
+    <value>اکثر</value>
+  </data>
+  <data name="ok" xml:space="preserve">
+    <value>ٹھیک ہے</value>
+  </data>
+  <data name="overview" xml:space="preserve">
+    <value>ہکلاہٹ کا جائزہ</value>
+  </data>
+  <data name="overview_definition" xml:space="preserve">
+    <value>ہکلاہٹ ایک ایسا  مرض ہے جس میں افرا کو  روانی سے بولنے میں متواتر اور واضح مسائل درپیش ہوتےہیں</value>
+  </data>
+  <data name="rater_inst_d" xml:space="preserve">
+    <value>جب آپ بولتے ہوئے ہکلاتے ہیں تو D بٹن دبائیں۔</value>
+  </data>
+  <data name="rater_inst_reset" xml:space="preserve">
+    <value>ٹائمر اور ریکارڈ کو دوبارہ ترتیب دینے کے لیے RESET بٹن دبائیں۔</value>
+  </data>
+  <data name="rater_inst_s" xml:space="preserve">
+    <value>جب آپ کوئی حرف بولیں تو S بٹن دبائیں۔</value>
+  </data>
+  <data name="rater_inst_start" xml:space="preserve">
+    <value>ٹائمر شروع کرنے کے لیے START بٹن دبائیں۔</value>
+  </data>
+  <data name="rater_inst_stop" xml:space="preserve">
+    <value>ٹائمر کو روکنے کے لیے STOP بٹن دبائیں۔</value>
+  </data>
+  <data name="save" xml:space="preserve">
+    <value>محفوظ کریں</value>
+  </data>
+  <data name="secs" xml:space="preserve">
+    <value>سیکنڈ</value>
+  </data>
+  <data name="self_eva_q1" xml:space="preserve">
+    <value>میرے بولنے میں کتنی روانی تھی؟</value>
+  </data>
+  <data name="self_eva_q2" xml:space="preserve">
+    <value>میرے بولنے میں مندرجہ زیل خصوصیات کتنی مرتبہ آئیں؟
+1۔ دہرانا       (Repetition)
+2۔رکاوٹ(Blockage)
+3۔ ہچکچاہٹ  (Hesitation)
+4۔ طول دینا  (Prolongation)</value>
+  </data>
+  <data name="self_eva_q3" xml:space="preserve">
+    <value>میں نے کتنی بار سست تقریر کا استعمال کیا؟</value>
+  </data>
+  <data name="self_eva_q4" xml:space="preserve">
+    <value>میری بات چیت کتنی موثر تھی؟</value>
+  </data>
+  <data name="self_eva_q5" xml:space="preserve">
+    <value>کیا مجھے موثر  طریقہ سے  بات چیت  کرنے میں رکاوٹ رہی تھی؟</value>
+  </data>
+  <data name="self_eva_q6" xml:space="preserve">
+    <value>کیا میری بات چیت کے دوران گردن میں تنا ؤ تھا؟</value>
+  </data>
+  <data name="self_eva_q7" xml:space="preserve">
+    <value>کیامیں نے بات چیت کے دوران تیزی سے آنکھیں جھپکنے ، جبڑے کو ہلانے ، پاؤں ہلانے ، سر جھٹکنے ، انگلیاں چٹخنے اور/یا  دیگر غیر ضروری حرکات کا مشاہدہ کیا ؟</value>
+  </data>
+  <data name="self_rating_instruction" xml:space="preserve">
+    <value>" 1" کو  ہکلانے کی کم شرح اور" 10" کو شدید شدت کے طور پر سمجھا جائے گا</value>
+  </data>
+  <data name="self_rating_q" xml:space="preserve">
+    <value>ہکلانے کی شدت کو مارک(Mark) کریں</value>
+  </data>
+  <data name="settings" xml:space="preserve">
+    <value>ترتیبات</value>
+  </data>
+  <data name="set_time" xml:space="preserve">
+    <value>وقت کی مدت مقرر کریں</value>
+  </data>
+  <data name="start" xml:space="preserve">
+    <value>شروع</value>
+  </data>
+  <data name="start_stutter" xml:space="preserve">
+    <value>براہ کرم پہلے stutter rater کو چلائیں!</value>
+  </data>
+  <data name="stop_stutter" xml:space="preserve">
+    <value>براہ کرم پہلے stutter rater کو بند کریں!</value>
+  </data>
+  <data name="title_assessment" xml:space="preserve">
+    <value>خود  تشخیص</value>
+  </data>
+  <data name="title_breathing" xml:space="preserve">
+    <value>سانس لینے کی مشقیں</value>
+  </data>
+  <data name="title_evaluation" xml:space="preserve">
+    <value>بولنے میں روانی کا جائزہ</value>
+  </data>
+  <data name="title_flexible" xml:space="preserve">
+    <value>روانی سے بولنے کی شرح</value>
+  </data>
+  <data name="title_management" xml:space="preserve">
+    <value>سیلف مینجمنٹ</value>
+  </data>
+  <data name="title_onset" xml:space="preserve">
+    <value>آسان بات چیت کا آغاز</value>
+  </data>
+  <data name="title_rater" xml:space="preserve">
+    <value>ہکلانے  کی فیصد میں درجہ بندی</value>
+  </data>
+  <data name="title_rating" xml:space="preserve">
+    <value>ہکلانے کی خود درجہ بندی</value>
+  </data>
+  <data name="title_settings" xml:space="preserve">
+    <value>ترتیبات</value>
+  </data>
+  <data name="total" xml:space="preserve">
+    <value>کل تعداد</value>
+  </data>
+  <data name="triggers_heading" xml:space="preserve">
+    <value>ہکلاہٹ کے محرکات</value>
+  </data>
+  <data name="triggers_para" xml:space="preserve">
+    <value>ہکلاہٹ اس وقت شدید ہو سکتی ہے جب ایک شخص زیادہ پر جوش، تھکا ہوا، کسی دباؤ یا تناؤ کا شکار ہو یا جلدی بولنے اور بات ختم کرنے کی کوشش کرے۔کچھ حالات مثلاًدو سے زائد افراد کے گروپ سے بات کرنا یا فون پر بات کرنا ہکلاہٹ کرنے والے افراد کیلئے مشکل ہوسکتا ہے</value>
+  </data>
+  <data name="urdu" xml:space="preserve">
+    <value>اردو</value>
+  </data>
+  <data name="varies_heading" xml:space="preserve">
+    <value>ہکلاہٹ میں اتار چڑھاؤ</value>
+  </data>
+  <data name="varies_para" xml:space="preserve">
+    <value>ہکلاہٹ کرنے والے افراد تمام حالات میں ایک ہی طرح یا ایک ہی جتنا نہیں ہکلاتے۔ ہکلاہٹ میں تغیرات بعض اوقات انکے والدین اوراساتذہ کوالجھادیتے ہیں کہ وہ کیوں ایک صورتِ حال میں تو روانی میں بولتا ہے مگر دوسرے میں کیوں ہکلاتا ہے۔یہ اسلیئے نہیں ہوتا کہ و ہ ایک صورتِ حال میں تو روانی سے بولنے کی کوشش کرتا ہے مگر دوسری صورتِ حال میں نہیں بلکہ یہ اسلئے ہے کہ ہکلاہٹ ہر صورتِحال میں  بدلتی رھتی ہوتی ہے</value>
+  </data>
+</root>

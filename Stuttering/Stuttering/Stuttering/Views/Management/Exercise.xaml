@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Stuttering.Views.Management.Exercise"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <Grid VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="White" Padding="0">
+            <StackLayout Orientation="Horizontal" BackgroundColor="{StaticResource Primary}" Padding="20,15" Spacing="20"
+                             VerticalOptions="Start">
+                <ImageButton Source="back.png" HeightRequest="30" Clicked="BackButton_Clicked" BackgroundColor="Transparent"/>
+                <Label Text="{Binding Chapter.NameVisible}" x:Name="NavTitle" TextColor="White" 
+                               FontSize="Medium" VerticalTextAlignment="Center" HorizontalOptions="FillAndExpand"/>
+                <Label HeightRequest="30" BackgroundColor="Transparent" 
+                                     x:Name="InfoBtn">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="{Binding CurrentLevel}"/>
+                            <Span Text="/"/>
+                            <Span Text="{Binding TotalLevels}"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+            <Label Text="{Binding Exercise.DescriptionVisible}" TextColor="black" HorizontalOptions="CenterAndExpand"
+                                       VerticalOptions="CenterAndExpand" FontSize="22" FontAttributes="Bold"/>
+            <Frame Padding="0" CornerRadius="5" Margin="20" HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand">
+                <StackLayout Spacing="20" BackgroundColor="LightGray" 
+                             Padding="10" Orientation="Horizontal">
+                    <ImageButton Source="pauseDark.png" BackgroundColor="Transparent" HorizontalOptions="CenterAndExpand"
+                             VerticalOptions="EndAndExpand" Command="{Binding PauseCommand}" HeightRequest="30"/>
+                    <ImageButton Source="playDark.png" BackgroundColor="Transparent" HorizontalOptions="CenterAndExpand"
+                             VerticalOptions="EndAndExpand" Command="{Binding PlayCommand}" HeightRequest="30"/>
+                    <ImageButton Source="stopDark.png" BackgroundColor="Transparent" HorizontalOptions="CenterAndExpand"
+                             VerticalOptions="EndAndExpand" Command="{Binding StopCommand}" HeightRequest="30"/>
+                </StackLayout>
+            </Frame>
+            <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" IsVisible="{Binding IsDownloading}">
+                <Frame BackgroundColor="White" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                    <StackLayout >
+                        <ActivityIndicator HeightRequest="50" WidthRequest="50" IsRunning="True" Color="{StaticResource Darker}"/>
+                        <Label Text="Loading Audio"/>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

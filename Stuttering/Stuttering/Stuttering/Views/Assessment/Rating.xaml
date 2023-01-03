@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Stuttering.Views.Assessment.Rating" BackgroundColor="White">-->
+    <ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Stuttering.Views.Assessment.Rating" 
+                 xmlns:i18n="clr-namespace:Stuttering.Helper;assembly=Stuttering"
+             VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"
+             >
+    <ContentView.Content>
+        <StackLayout VerticalOptions="FillAndExpand"  HorizontalOptions="FillAndExpand" Margin="0,0,0,80" Padding="20">
+            <StackLayout VerticalOptions="CenterAndExpand" Spacing="30">
+                <Label Text="{i18n:Translate self_rating_q}"
+                       HorizontalOptions="CenterAndExpand" FontSize="18" HorizontalTextAlignment="Center"/>
+                <StackLayout Orientation="Horizontal">
+                    <Frame Style="{StaticResource RateBtnFrame}">
+                        <Button Text="1" Style="{StaticResource RateBtnSelected}" 
+                                Clicked="Button_Clicked" CommandParameter="1"
+                                x:Name="Btn1"/>
+                    </Frame>
+                    <Frame Style="{StaticResource RateBtnFrame}">
+                        <Button Text="2" Style="{StaticResource RateBtn}"
+                                Clicked="Button_Clicked" CommandParameter="2"
+                                x:Name="Btn2"/>
+                    </Frame>
+                    <Frame  Style="{StaticResource RateBtnFrame}">
+                        <Button Text="3" Style="{StaticResource RateBtn}"
+                                Clicked="Button_Clicked" CommandParameter="3"
+                                x:Name="Btn3"/>
+                    </Frame>
+                    <Frame Style="{StaticResource RateBtnFrame}">
+                        <Button Text="4" Style="{StaticResource RateBtn}"
+                                Clicked="Button_Clicked" CommandParameter="4"
+                                x:Name="Btn4"/>
+                    </Frame>
+                    <Frame  Style="{StaticResource RateBtnFrame}">
+                        <Button Text="5" Style="{StaticResource RateBtn}"
+                                Clicked="Button_Clicked" CommandParameter="5"
+                                x:Name="Btn5"/>
+                    </Frame>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Frame Style="{StaticResource RateBtnFrame}">
+                        <Button Text="6" Style="{StaticResource RateBtn}"
+                                Clicked="Button_Clicked" CommandParameter="6"
+                                x:Name="Btn6"/>
+                    </Frame>
+                    <Frame Style="{StaticResource RateBtnFrame}">
+                        <Button Text="7" Style="{StaticResource RateBtn}"
+                                Clicked="Button_Clicked" CommandParameter="7"
+                                x:Name="Btn7"/>
+                    </Frame>
+                    <Frame Style="{StaticResource RateBtnFrame}">
+                        <Button Text="8" Style="{StaticResource RateBtn}"
+                                Clicked="Button_Clicked" CommandParameter="8"
+                                x:Name="Btn8"/>
+                    </Frame>
+                    <Frame Style="{StaticResource RateBtnFrame}">
+                        <Button Text="9" Style="{StaticResource RateBtn}"
+                                Clicked="Button_Clicked" CommandParameter="9"
+                                x:Name="Btn9"/>
+                    </Frame>
+                    <Frame Style="{StaticResource RateBtnFrame}">
+                        <Button Text="10" Style="{StaticResource RateBtn}"
+                                Clicked="Button_Clicked" CommandParameter="10"
+                                x:Name="Btn10"/>
+                    </Frame>
+                </StackLayout>
+                <Button Text="{i18n:Translate save}" BackgroundColor="{StaticResource Primary}" TextColor="White"
+                        Clicked="SaveButton_Clicked"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>

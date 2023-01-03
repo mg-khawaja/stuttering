@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Stuttering.App">
+    <!--
+        Define global resources and styles here, that apply to all pages in your app.
+    -->
+    <Application.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Primary">#00AFB6</Color>
+            <Color x:Key="Darker">#008c92</Color>
+            <Color x:Key="Lighter">#00dbe4</Color>
+            <Color x:Key="Inverted">#ff5049</Color>
+            <Color x:Key="Saturated">#00c4cd</Color>
+            <Color x:Key="Grayscale">#5b5b5b</Color>
+            <Color x:Key="Teal">#00AFB6</Color>
+            <Color x:Key="Desaturated">#129ea4</Color>
+            <Color x:Key="LightSeaGreen">#20b2aa</Color>
+            <Style TargetType="Button" x:Key="GnrBtn">
+                <Setter Property="FontFamily" Value="Manrope"/>
+                <Setter Property="TextColor" Value="White"></Setter>
+                <Setter Property="VisualStateManager.VisualStateGroups">
+                    <VisualStateGroupList>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor" Value="{StaticResource Primary}" />
+                                </VisualState.Setters>
+                            </VisualState>
+                            <VisualState x:Name="Disabled">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor" Value="#332196F3" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateGroupList>
+                </Setter>
+            </Style>
+            <Style x:Key="RateFrame" TargetType="Frame">
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+                <Setter Property="WidthRequest" Value="40"/>
+                <Setter Property="HeightRequest" Value="40"/>
+                <Setter Property="Padding" Value="0"/>
+                <Setter Property="BackgroundColor" Value="LightGray"/>
+                <Setter Property="CornerRadius" Value="10"/>
+            </Style>
+            <Style x:Key="RateBtnFrame" TargetType="Frame">
+                <Setter Property="Padding" Value="0"/>
+                <Setter Property="Margin" Value="0"/>
+                <Setter Property="CornerRadius" Value="10"/>
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+            </Style>
+            <Style x:Key="RateBtn" TargetType="Button">
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+                <Setter Property="WidthRequest" Value="40"/>
+                <Setter Property="HeightRequest" Value="40"/>
+                <Setter Property="Padding" Value="0"/>
+                <Setter Property="CornerRadius" Value="10"/>
+                <Setter Property="BackgroundColor" Value="White"/>
+                <Setter Property="TextColor" Value="{StaticResource Primary}"/>
+            </Style>
+            <Style x:Key="RateBtnSelected" TargetType="Button">
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+                <Setter Property="WidthRequest" Value="40"/>
+                <Setter Property="HeightRequest" Value="40"/>
+                <Setter Property="Padding" Value="0"/>
+                <Setter Property="CornerRadius" Value="10"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource Primary}"/>
+                <Setter Property="TextColor" Value="White"/>
+            </Style>
+            <Style x:Key="RateLabel" TargetType="Label">
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+                <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+            </Style>
+            <Style x:Key="RateSeparator" TargetType="BoxView">
+                <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+                <Setter Property="HeightRequest" Value="1"/>
+                <Setter Property="BackgroundColor" Value="LightGray"/>
+            </Style>
+            <Style TargetType="Label">
+                <Setter Property="FontFamily" Value="Manrope"/>
+            </Style>
+            <Style TargetType="StackLayout" x:Key="MenuItemContainer">
+                <Setter Property="Padding" Value="20,10"/>
+            </Style>
+            <Style TargetType="StackLayout" x:Key="SubMenuItemContainer">
+                <Setter Property="Padding" Value="0,10"/>
+            </Style>
+            <Style TargetType="StackLayout" x:Key="SubMenuItem">
+                <Setter Property="Margin" Value="50,0,20,0"/>
+            </Style>
+            <Style TargetType="Image" x:Key="MenuItemIcon">
+                <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+                <Setter Property="HeightRequest" Value="25"/>
+            </Style>
+            <Style TargetType="Label" x:Key="MenuItemLabel">
+                <Setter Property="VerticalTextAlignment" Value="Center"/>
+            </Style>
+        </ResourceDictionary>        
+    </Application.Resources>
+</Application>

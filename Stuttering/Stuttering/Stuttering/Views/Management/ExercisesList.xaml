@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Stuttering.Views.Management.ExercisesList"
+             xmlns:i18n="clr-namespace:Stuttering.Helper;assembly=Stuttering"
+             BackgroundColor="White" 
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content >
+        <StackLayout Padding="0">
+            <StackLayout Orientation="Horizontal" BackgroundColor="{StaticResource Primary}" Padding="20,15" Spacing="20">
+                <ImageButton Source="back.png" HeightRequest="30" Clicked="BackButton_Clicked" BackgroundColor="Transparent"/>
+                <Label Text="{Binding Chapter.NameVisible}" x:Name="NavTitle" TextColor="White" 
+                               FontSize="Medium" VerticalTextAlignment="Center" HorizontalOptions="FillAndExpand"/>
+                <Label HeightRequest="30" BackgroundColor="Transparent" 
+                                     x:Name="InfoBtn" TextColor="White" VerticalTextAlignment="Center">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="{i18n:Translate total}"/>
+                            <Span Text=": "/>
+                            <Span Text="{Binding Exercises.Count}"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+            <CollectionView ItemsSource="{Binding Exercises}" Margin="10">
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout Orientation="Vertical" HorizontalItemSpacing="10" VerticalItemSpacing="10"
+                                 Span="2" />
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <!--<ViewCell>-->
+                        <Frame Padding="0" CornerRadius="10" HasShadow="True">
+                            <Grid BackgroundColor="{StaticResource Lighter}" HeightRequest="200">
+                                <Label Text="{Binding DescriptionVisible}" TextColor="black" HorizontalOptions="CenterAndExpand"
+                                       VerticalOptions="CenterAndExpand" FontSize="16" FontAttributes="Bold"/>
+                                <StackLayout BackgroundColor="#e0e0e0" Opacity="0.9" IsVisible="{Binding IsLocked}" 
+                                             HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+                                <Image Source="lock.png" HorizontalOptions="EndAndExpand" VerticalOptions="Start"
+                                       HeightRequest="50" Margin="10" IsVisible="{Binding IsLocked}"/>
+                            </Grid>
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer CommandParameter="{Binding .}"
+                                                      Tapped="TapGestureRecognizer_Tapped"/>
+                            </Frame.GestureRecognizers>
+                        </Frame>
+                        <!--</ViewCell>-->
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

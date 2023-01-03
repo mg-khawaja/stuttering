@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Stuttering.Views.Assessment.Rater" 
+             xmlns:i18n="clr-namespace:Stuttering.Helper;assembly=Stuttering">
+    <ContentView.Content>
+        <ScrollView>
+            <StackLayout Padding="5">
+                <StackLayout HorizontalOptions="CenterAndExpand" WidthRequest="120" >
+                    <Label Text="{Binding TimerText}" 
+                   FontSize="20" Margin="0,30,0,30"
+                           />
+                </StackLayout>
+                <Grid VerticalOptions="CenterAndExpand" RowSpacing="20">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="100"/>
+                        <RowDefinition Height="100"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
+                       HorizontalTextAlignment="Center">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Stutter/Syllable:"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
+                       HorizontalTextAlignment="Start" WidthRequest="50" Margin="0,50,0,0">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="{Binding StutterPerSyllable}"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label VerticalOptions="CenterAndExpand" Grid.Column="1" HorizontalOptions="CenterAndExpand" 
+                       HorizontalTextAlignment="Center">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Syllables/Minute:" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label VerticalOptions="CenterAndExpand" Grid.Column="1" HorizontalOptions="CenterAndExpand" 
+                       HorizontalTextAlignment="Start" WidthRequest="45" Margin="0,50,0,0" >
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="{Binding SyllablePerMinute}"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Grid.Row="1"
+                       HorizontalTextAlignment="Center">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Syllable: "/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Grid.Row="1"
+                           Margin="0,50,0,0"
+                           HorizontalTextAlignment="Start" WidthRequest="20" >
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="{Binding Syllables}"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Grid.Row="1" Grid.Column="1"
+                       HorizontalTextAlignment="Center">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Stutter: "/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Grid.Row="1" Grid.Column="1"
+                           Margin="0,50,0,0" WidthRequest="20" 
+                           HorizontalTextAlignment="Start">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="{Binding Stutters}"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                </Grid>
+                <Grid VerticalOptions="EndAndExpand">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="200"/>
+                        <RowDefinition Height="100"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="SyllableBtn" Text="S" Clicked="SyllableBtn_Clicked"
+                             Style="{StaticResource GnrBtn}"/>
+                    <Button x:Name="StutterBtn" Text="D" Clicked="StutterBtn_Clicked" Grid.Column="1"
+                             Style="{StaticResource GnrBtn}"/>
+                    <Button x:Name="StartStopBtn" Text="Start" Clicked="StartStopBtn_Clicked" Grid.Row="1"
+                             Style="{StaticResource GnrBtn}"/>
+                    <Button x:Name="ResetBtn" Text="Reset" Clicked="ResetBtn_Clicked" Grid.Row="1" Grid.Column="1"
+                             Style="{StaticResource GnrBtn}"/>
+                </Grid>
+                <!--save-->
+                <Button Text="{i18n:Translate save}" BackgroundColor="{StaticResource Primary}" TextColor="White"
+                            Clicked="SaveButton_Clicked"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentView.Content>
+</ContentView>

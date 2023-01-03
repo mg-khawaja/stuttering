@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Stuttering.Views.Assessment.Evaluation" 
+             xmlns:i18n="clr-namespace:Stuttering.Helper;assembly=Stuttering"
+             BackgroundColor="White"
+             HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+    <ContentView.Content>
+        <ScrollView>
+            <StackLayout VerticalOptions="FillAndExpand"  HorizontalOptions="FillAndExpand" 
+                         Margin="0" Padding="20" >
+                <StackLayout Spacing="30">
+                    <!--Q1-->
+                    <StackLayout Spacing="15">
+                        <Label Text="{i18n:Translate self_eva_q1}"
+                       HorizontalOptions="CenterAndExpand" FontSize="18" HorizontalTextAlignment="Center"/>
+                        <StackLayout Orientation="Horizontal">
+                            <Frame Style="{StaticResource RateBtnFrame}">
+                                <Button Text="1" Style="{StaticResource RateBtnSelected}" 
+                                        x:Name="Q1Btn1" Clicked="Q1Btn_Clicked" CommandParameter="1"/>
+                            </Frame>
+                            <Frame Style="{StaticResource RateBtnFrame}">
+                                <Button Text="2" Style="{StaticResource RateBtn}"
+                                        x:Name="Q1Btn2" Clicked="Q1Btn_Clicked" CommandParameter="2"/>
+                            </Frame>
+                            <Frame Style="{StaticResource RateBtnFrame}">
+                                <Button Text="3" Style="{StaticResource RateBtn}"
+                                        x:Name="Q1Btn3" Clicked="Q1Btn_Clicked" CommandParameter="3"/>
+                            </Frame>
+                            <Frame Style="{StaticResource RateBtnFrame}">
+                                <Button Text="4" Style="{StaticResource RateBtn}"
+                                        x:Name="Q1Btn4" Clicked="Q1Btn_Clicked" CommandParameter="4"/>
+                            </Frame>
+                        </StackLayout>
+                        <BoxView Style="{StaticResource RateSeparator}"/>
+                    </StackLayout>
+                    <!--Q2-->
+                    <StackLayout Spacing="15">
+                        <Label Text="{i18n:Translate self_eva_q2}"
+                       HorizontalOptions="CenterAndExpand" FontSize="18" HorizontalTextAlignment="Center"/>
+                        <StackLayout Orientation="Horizontal">
+                            <Frame Style="{StaticResource RateBtnFrame}">
+                                <Button Text="1" Style="{StaticResource RateBtn}"
+                                        x:Name="Q2Btn1" Clicked="Q2Btn_Clicked" CommandParameter="1"/>
+                            </Frame>
+                            <Frame Style="{StaticResource RateBtnFrame}">
+                                <Button Text="2" Style="{StaticResource RateBtn}"
+                                        x:Name="Q2Btn2" Clicked="Q2Btn_Clicked" CommandParameter="2"/>
+                            </Frame>
+                            <Frame Style="{StaticResource RateBtnFrame}">
+                                <Button Text="3" Style="{StaticResource RateBtn}"
+                                        x:Name="Q2Btn3" Clicked="Q2Btn_Clicked" CommandParameter="3"/>
+                            </Frame>
+                            <Frame Style="{StaticResource RateBtnFrame}">
+                                <Button Text="4" Style="{StaticResource RateBtn}"
+                                        x:Name="Q2Btn4" Clicked="Q2Btn_Clicked" CommandParameter="4"/>
+                            </Frame>
+                        </StackLayout>
+                        <BoxView Style="{StaticResource RateSeparator}"/>
+                    </StackLayout>
+                    <!--Q3-->
+                    <StackLayout Spacing="15">
+                        <Label Text="{i18n:Translate self_eva_q3}"
+                       HorizontalOptions="CenterAndExpand" FontSize="18" HorizontalTextAlignment="Center"/>
+                        <StackLayout Orientation="Horizontal">
+                            <Frame Style="{StaticResource RateBtnFrame}">
+                                <Button Text="1" Style="{StaticResource RateBtn}"
+                                        x:Name="Q3Btn1" Clicked="Q3Btn_Clicked" CommandParameter="1"/>
+                            </Frame>
+                            <Frame Style="{StaticResource RateBtnFrame}">
+                                <Button Text="2" Style="{StaticResource RateBtn}"
+                                        x:Name="Q3Btn2" Clicked="Q3Btn_Clicked" CommandParameter="2"/>
+                            </Frame>
+                            <Frame Style="{StaticResource RateBtnFrame}">
+                                <Button Text="3" Style="{StaticResource RateBtn}"
+                                        x:Name="Q3Btn3" Clicked="Q3Btn_Clicked" CommandParameter="3"/>
+                            </Frame>
+                            <Frame Style="{StaticResource RateBtnFrame}">
+                                <Button Text="4" Style="{StaticResource RateBtn}"
+                                        x:Name="Q3Btn4" Clicked="Q3Btn_Clicked" CommandParameter="4"/>
+                            </Frame>
+                        </StackLayout>
+                        <BoxView Style="{StaticResource RateSeparator}"/>
+                    </StackLayout>
+                    <!--Q4-->
+                    <StackLayout Spacing="15">
+                        <Label Text="{i18n:Translate self_eva_q4}"
+                       HorizontalOptions="CenterAndExpand" FontSize="18" HorizontalTextAlignment="Center"/>
+                        <StackLayout Orientation="Horizontal">
+                            <Frame Style="{StaticResource RateBtnFrame}">
+                                <Button Text="1" Style="{StaticResource RateBtn}"
+                                        x:Name="Q4Btn1" Clicked="Q4Btn_Clicked" CommandParameter="1"/>
+                            </Frame>
+                            <Frame Style="{StaticResource RateBtnFrame}">
+                                <Button Text="2" Style="{StaticResource RateBtn}"
+                                        x:Name="Q4Btn2" Clicked="Q4Btn_Clicked" CommandParameter="2"/>
+                            </Frame>
+                            <Frame Style="{StaticResource RateBtnFrame}">
+                                <Button Text="3" Style="{StaticResource RateBtn}"
+                                        x:Name="Q4Btn3" Clicked="Q4Btn_Clicked" CommandParameter="3"/>
+                            </Frame>
+                            <Frame Style="{StaticResource RateBtnFrame}">
+                                <Button Text="4" Style="{StaticResource RateBtn}"
+                                        x:Name="Q4Btn4" Clicked="Q4Btn_Clicked" CommandParameter="4"/>
+                            </Frame>
+                        </StackLayout>
+                        <BoxView Style="{StaticResource RateSeparator}"/>
+                    </StackLayout>
+                    <!--Q5-->
+                    <StackLayout Spacing="15">
+                        <Label Text="{i18n:Translate self_eva_q5}"
+                       HorizontalOptions="CenterAndExpand" FontSize="18" HorizontalTextAlignment="Center"/>
+                        <StackLayout Orientation="Horizontal">
+                            <Frame Style="{StaticResource RateBtnFrame}">
+                                <Button Text="1" Style="{StaticResource RateBtn}"
+                                        x:Name="Q5Btn1" Clicked="Q5Btn_Clicked" CommandParameter="1"/>
+                            </Frame>
+                            <Frame Style="{StaticResource RateBtnFrame}">
+                                <Button Text="2" Style="{StaticResource RateBtn}"
+                                        x:Name="Q5Btn2" Clicked="Q5Btn_Clicked" CommandParameter="2"/>
+                            </Frame>
+                            <Frame Style="{StaticResource RateBtnFrame}">
+                                <Button Text="3" Style="{StaticResource RateBtn}"
+                                        x:Name="Q5Btn3" Clicked="Q5Btn_Clicked" CommandParameter="3"/>
+                            </Frame>
+                            <Frame Style="{StaticResource RateBtnFrame}">
+                                <Button Text="4" Style="{StaticResource RateBtn}"
+                                        x:Name="Q5Btn4" Clicked="Q5Btn_Clicked" CommandParameter="4"/>
+                            </Frame>
+                        </StackLayout>
+                        <BoxView Style="{StaticResource RateSeparator}"/>
+                    </StackLayout>
+                    <!--Q6-->
+                    <StackLayout Spacing="15">
+                        <Label Text="{i18n:Translate self_eva_q6}"
+                       HorizontalOptions="CenterAndExpand" FontSize="18" HorizontalTextAlignment="Center"/>
+                        <StackLayout Orientation="Horizontal">
+                            <Frame Style="{StaticResource RateBtnFrame}">
+                                <Button Text="1" Style="{StaticResource RateBtn}"
+                                        x:Name="Q6Btn1" Clicked="Q6Btn_Clicked" CommandParameter="1"/>
+                            </Frame>
+                            <Frame Style="{StaticResource RateBtnFrame}">
+                                <Button Text="2" Style="{StaticResource RateBtn}"
+                                        x:Name="Q6Btn2" Clicked="Q6Btn_Clicked" CommandParameter="2"/>
+                            </Frame>
+                            <Frame Style="{StaticResource RateBtnFrame}">
+                                <Button Text="3" Style="{StaticResource RateBtn}"
+                                        x:Name="Q6Btn3" Clicked="Q6Btn_Clicked" CommandParameter="3"/>
+                            </Frame>
+                            <Frame Style="{StaticResource RateBtnFrame}">
+                                <Button Text="4" Style="{StaticResource RateBtn}"
+                                        x:Name="Q6Btn4" Clicked="Q6Btn_Clicked" CommandParameter="4"/>
+                            </Frame>
+                        </StackLayout>
+                        <BoxView Style="{StaticResource RateSeparator}"/>
+                    </StackLayout>
+                    <!--Q7-->
+                    <StackLayout Spacing="15">
+                        <Label Text="{i18n:Translate self_eva_q7}"
+                       HorizontalOptions="CenterAndExpand" FontSize="18" HorizontalTextAlignment="Center"/>
+                        <StackLayout Orientation="Horizontal">
+                            <Frame Style="{StaticResource RateBtnFrame}">
+                                <Button Text="1" Style="{StaticResource RateBtn}"
+                                        x:Name="Q7Btn1" Clicked="Q7Btn_Clicked" CommandParameter="1"/>
+                            </Frame>
+                            <Frame Style="{StaticResource RateBtnFrame}">
+                                <Button Text="2" Style="{StaticResource RateBtn}"
+                                        x:Name="Q7Btn2" Clicked="Q7Btn_Clicked" CommandParameter="2"/>
+                            </Frame>
+                            <Frame Style="{StaticResource RateBtnFrame}">
+                                <Button Text="3" Style="{StaticResource RateBtn}"
+                                        x:Name="Q7Btn3" Clicked="Q7Btn_Clicked" CommandParameter="3"/>
+                            </Frame>
+                            <Frame Style="{StaticResource RateBtnFrame}">
+                                <Button Text="4" Style="{StaticResource RateBtn}"
+                                        x:Name="Q7Btn4" Clicked="Q7Btn_Clicked" CommandParameter="4"/>
+                            </Frame>
+                        </StackLayout>
+                        <BoxView Style="{StaticResource RateSeparator}"/>
+                    </StackLayout>
+                    <!--save-->
+                    <Button Text="{i18n:Translate save}" BackgroundColor="{StaticResource Primary}" TextColor="White"
+                            Clicked="SaveButton_Clicked"/>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentView.Content>
+</ContentView>

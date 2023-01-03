@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:gesturepatternview="clr-namespace:FaulandCc.XF.GesturePatternView;assembly=FaulandCc.XF.GesturePatternView"
+             x:Class="Stuttering.Views.Auth.PatternView" NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <Grid>
+            <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="White">
+                <Label Text="{Binding PatternLabel}" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"
+                       Margin="0,20,0,0" FontSize="Large"/>
+                <gesturepatternview:GesturePatternView x:Name="pattern" HorizontalTouchPoints="3" VerticalTouchPoints="3"
+                                                   GesturePatternCompleted="pattern_GesturePatternCompleted"
+                                                   HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+                                                   LineDrawnColor="{StaticResource Primary}" 
+                                                   TouchPointColor="{StaticResource Primary}" 
+                                                   TouchPointHighlightColor="{StaticResource Primary}" 
+                                                   LineDrawingStrokeWidth="7"
+                                                   LineDrawnStrokeWidth="7" TouchPointTouchedStrokeWidth="7"/>
+            </StackLayout>
+            <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="White"
+                         IsVisible="{Binding IsBusy}">
+                <Image Source="busy.gif" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
+                       IsAnimationPlaying="True" />
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
