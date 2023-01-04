@@ -78,11 +78,11 @@ namespace Stuttering.ViewModels
                             }
                             else
                             {
-                                await (Application.Current as App).MainPage.DisplayAlert("Mismatch", "Pin is incorrect!", "OK");
+                                await (Application.Current as App).MainPage.DisplayAlert(StutteringResources.mismatched, StutteringResources.incorrect_pin, StutteringResources.ok);
                             }
                             break;
                         case LockStatus.EnterNew:
-                            PinLabel = "Enter again";
+                            PinLabel = StutteringResources.enter_again;
                             newPin = pin;
                             status = LockStatus.EnterAgain;
                             break;
@@ -97,7 +97,7 @@ namespace Stuttering.ViewModels
                             }
                             else
                             {
-                                await (Application.Current as App).MainPage.DisplayAlert("Mismatch", "Pin is incorrect!", "OK");
+                                await (Application.Current as App).MainPage.DisplayAlert(StutteringResources.mismatched, StutteringResources.incorrect_pin, StutteringResources.ok);
                             }
                             break;
                         default:
@@ -115,7 +115,7 @@ namespace Stuttering.ViewModels
                     }
                     else
                     {
-                        await (Application.Current as App).MainPage.DisplayAlert("Mismatch", "Pin is incorrect!", "OK");
+                                await (Application.Current as App).MainPage.DisplayAlert(StutteringResources.mismatched, StutteringResources.incorrect_pin, StutteringResources.ok);
                     }
                     break;
                 case LockCheckType.ChangeLock:
@@ -125,17 +125,17 @@ namespace Stuttering.ViewModels
                             if (string.IsNullOrEmpty(GlobalSettings.CurrentUser.Pin) || GlobalSettings.CurrentUser.Pin == pin)
                             {
                                 status = LockStatus.EnterNew;
-                                PinLabel = "Enter new Pin";
+                                PinLabel = StutteringResources.new_pin;
                                 IsSecLabelVisible = true;
                             }
                             else
                             {
-                                await (Application.Current as App).MainPage.DisplayAlert("Mismatch", "Pin is incorrect!", "OK");
+                                await (Application.Current as App).MainPage.DisplayAlert(StutteringResources.mismatched, StutteringResources.incorrect_pin, StutteringResources.ok);
                             }
                             break;
                         case LockStatus.EnterNew:
                             newPin = pin;
-                            PinLabel = "Enter again";
+                            PinLabel = StutteringResources.enter_again;
                             status = LockStatus.EnterAgain;
                             break;
                         case LockStatus.EnterAgain:
@@ -149,7 +149,7 @@ namespace Stuttering.ViewModels
                             }
                             else
                             {
-                                await (Application.Current as App).MainPage.DisplayAlert("Mismatch", "Pin is incorrect!", "OK");
+                                await (Application.Current as App).MainPage.DisplayAlert(StutteringResources.mismatched, StutteringResources.incorrect_pin, StutteringResources.ok);
                             }
                             break;
                         default:
@@ -163,7 +163,7 @@ namespace Stuttering.ViewModels
                     }
                     else
                     {
-                        await (Application.Current as App).MainPage.DisplayAlert("Mismatch", "Pin is incorrect!", "OK");
+                                await (Application.Current as App).MainPage.DisplayAlert(StutteringResources.mismatched, StutteringResources.incorrect_pin, StutteringResources.ok);
                     }
                     break;
                 default:
@@ -180,29 +180,29 @@ namespace Stuttering.ViewModels
                 case LockCheckType.EnableLock:
                     if (string.IsNullOrEmpty(GlobalSettings.CurrentUser.Pin))
                     {
-                        PinLabel = "Enter new Pin";
+                        PinLabel = StutteringResources.new_pin;
                         status = LockStatus.EnterNew;
                     }
                     else
                     {
-                        PinLabel = "Enter Pin to enable";
+                        PinLabel = StutteringResources.enable_pin;
                         status = LockStatus.EnterCurrent;
                         IsSecLabelVisible = false;
                     }
                     break;
                 case LockCheckType.DisableLock:
-                    PinLabel = "Enter Pin to disable";
+                    PinLabel = StutteringResources.disable_pin;
                     status = LockStatus.EnterCurrent;
                     IsSecLabelVisible = false;
                     break;
                 case LockCheckType.ChangeLock:
-                    PinLabel = "Enter Current Pin";
+                    PinLabel = StutteringResources.current_pin;
                     status = LockStatus.EnterCurrent;
                     IsSecLabelVisible = false;
                     break;
                 case LockCheckType.Login:
                     IsSecLabelVisible = false;
-                    PinLabel = "Enter Pin";
+                    PinLabel = StutteringResources.enter_pin;
                     var user = SQLiteDbManager.GetUser();
                     if (user != null)
                     {

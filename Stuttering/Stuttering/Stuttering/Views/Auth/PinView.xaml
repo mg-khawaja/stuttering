@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              xmlns:otpcontrol="clr-namespace:OTPControl;assembly=OTPControl"
+             xmlns:i18n="clr-namespace:Stuttering.Helper;assembly=Stuttering"
              x:Class="Stuttering.Views.Auth.PinView" 
              NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
@@ -14,10 +15,10 @@
                 <otpcontrol:CustomOtpControl FillBorderColor="{StaticResource Primary}" EmptyBorderColor="Gray"   
                                              OtpLength="4" HorizontalOptions="FillAndExpand" HorizontalSpacing="20"
                                              Margin="20,40,0,20" x:Name="otp"/>
-                <Label Text="Do not forget this pin. If you forget this pin, you won't be able to login to the app again." 
+                <Label Text="{i18n:Translate pin_description}" 
                        HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"
                        Margin="20,20,20,20" FontSize="Medium" IsVisible="{Binding IsSecLabelVisible}"/>
-                <Button Text="Go" x:Name="GoBtn" HorizontalOptions="CenterAndExpand" 
+                <Button Text="{i18n:Translate go}" x:Name="GoBtn" HorizontalOptions="CenterAndExpand" 
                         Clicked="GoBtn_Clicked" Style="{StaticResource GnrBtn}"/>
             </StackLayout>
             <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="White"

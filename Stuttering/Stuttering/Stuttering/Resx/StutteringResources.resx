@@ -445,4 +445,88 @@
   <data name="varies_para" xml:space="preserve">
     <value>People do not stutter the same way or the same amount in all situations. Variability can also confuse parents, teachers, and peers, for they may wonder why a person is fluent in one situation but struggles in another. It is not because the speaker is not trying hard enough; it is just because stuttering varies.</value>
   </data>
+  <data name="lock_type" xml:space="preserve">
+    <value>Lock Type</value>
+  </data>
+  <data name="lock" xml:space="preserve">
+    <value>Lock</value>
+  </data>
+  <data name="change_pin" xml:space="preserve">
+    <value>Change Pin</value>
+  </data>
+  <data name="change_pattern" xml:space="preserve">
+    <value>Change Pattern</value>
+  </data>
+  <data name="self_management" xml:space="preserve">
+    <value>Self Management</value>
+  </data>
+  <data name="self_assessment" xml:space="preserve">
+    <value>Self Assessment</value>
+  </data>
+  <data name="chapter" xml:space="preserve">
+    <value>Chapter</value>
+  </data>
+  <data name="level" xml:space="preserve">
+    <value>Level</value>
+  </data>
+  <data name="stats" xml:space="preserve">
+    <value>Stats</value>
+  </data>
+  <data name="new_pin" xml:space="preserve">
+    <value>Enter new Pin</value>
+  </data>
+  <data name="enter_again" xml:space="preserve">
+    <value>Enter again</value>
+  </data>
+  <data name="enable_pin" xml:space="preserve">
+    <value>Enter Pin to enable</value>
+  </data>
+  <data name="disable_pin" xml:space="preserve">
+    <value>Enter Pin to disable</value>
+  </data>
+  <data name="pin_description" xml:space="preserve">
+    <value>Do not forget this pin. If you forget this pin, you won't be able to login to the app again.</value>
+  </data>
+  <data name="new_pattern" xml:space="preserve">
+    <value>Draw new Pattern</value>
+  </data>
+  <data name="draw_again" xml:space="preserve">
+    <value>Draw again</value>
+  </data>
+  <data name="pin" xml:space="preserve">
+    <value>Pin</value>
+  </data>
+  <data name="pattern" xml:space="preserve">
+    <value>Pattern</value>
+  </data>
+  <data name="go" xml:space="preserve">
+    <value>Go</value>
+  </data>
+  <data name="current_pin" xml:space="preserve">
+    <value>موجودہ پن درج کریں</value>
+  </data>
+  <data name="enter_pin" xml:space="preserve">
+    <value>پن درج کریں</value>
+  </data>
+  <data name="incorrect_pin" xml:space="preserve">
+    <value>پن غلط ہے۔</value>
+  </data>
+  <data name="incorrect_pattern" xml:space="preserve">
+    <value>پیٹرن غلط ہے۔</value>
+  </data>
+  <data name="mismatched" xml:space="preserve">
+    <value>مماثل</value>
+  </data>
+  <data name="enter_pattern" xml:space="preserve">
+    <value>پیٹرن درج کریں</value>
+  </data>
+  <data name="enable_pattern" xml:space="preserve">
+    <value>پیٹرن درج کریں</value>
+  </data>
+  <data name="disable_pattern" xml:space="preserve">
+    <value>پیٹرن درج کریں</value>
+  </data>
+  <data name="current_pattern" xml:space="preserve">
+    <value>موجودہ پیٹرن درج کریں</value>
+  </data>
 </root>

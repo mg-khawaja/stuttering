@@ -56,11 +56,11 @@ namespace Stuttering.ViewModels
                             }
                             else
                             {
-                                await (Application.Current as App).MainPage.DisplayAlert("Mismatch", "Pattern is incorrect!", "OK");
+                                await (Application.Current as App).MainPage.DisplayAlert(Resx.StutteringResources.mismatched, Resx.StutteringResources.incorrect_pattern, Resx.StutteringResources.ok);
                             }
                             break;
                         case LockStatus.EnterNew:
-                            PatternLabel = "Draw again";
+                            PatternLabel = Resx.StutteringResources.draw_again;
                             newPattern = pattern;
                             status = LockStatus.EnterAgain;
                             break;
@@ -75,7 +75,7 @@ namespace Stuttering.ViewModels
                             }
                             else
                             {
-                                await (Application.Current as App).MainPage.DisplayAlert("Mismatch", "Pattern is incorrect!", "OK");
+                                await (Application.Current as App).MainPage.DisplayAlert(Resx.StutteringResources.mismatched, Resx.StutteringResources.incorrect_pattern, Resx.StutteringResources.ok);
                             }
                             break;
                         default:
@@ -92,7 +92,7 @@ namespace Stuttering.ViewModels
                     }
                     else
                     {
-                        await (Application.Current as App).MainPage.DisplayAlert("Mismatch", "Pattern is incorrect!", "OK");
+                        await (Application.Current as App).MainPage.DisplayAlert(Resx.StutteringResources.mismatched, Resx.StutteringResources.incorrect_pattern, Resx.StutteringResources.ok);
                     }
                     break;
                 case LockCheckType.ChangeLock:
@@ -102,16 +102,16 @@ namespace Stuttering.ViewModels
                             if (GlobalSettings.CurrentUser.Pattern == pattern)
                             {
                                 status = LockStatus.EnterNew;
-                                PatternLabel = "Draw new Pattern";
+                                PatternLabel = Resx.StutteringResources.new_pattern;
                             }
                             else
                             {
-                                await (Application.Current as App).MainPage.DisplayAlert("Mismatch", "Pattern is incorrect!", "OK");
+                                await (Application.Current as App).MainPage.DisplayAlert(Resx.StutteringResources.mismatched, Resx.StutteringResources.incorrect_pattern, Resx.StutteringResources.ok);
                             }
                             break;
                         case LockStatus.EnterNew:
                             newPattern = pattern;
-                            PatternLabel = "Draw again";
+                            PatternLabel = Resx.StutteringResources.draw_again;
                             status = LockStatus.EnterAgain;
                             break;
                         case LockStatus.EnterAgain:
@@ -124,7 +124,7 @@ namespace Stuttering.ViewModels
                             }
                             else
                             {
-                                await (Application.Current as App).MainPage.DisplayAlert("Mismatch", "Pattern is incorrect!", "OK");
+                                await (Application.Current as App).MainPage.DisplayAlert(Resx.StutteringResources.mismatched, Resx.StutteringResources.incorrect_pattern, Resx.StutteringResources.ok);
                             }
                             break;
                         default:
@@ -138,7 +138,7 @@ namespace Stuttering.ViewModels
                     }
                     else
                     {
-                        await (Application.Current as App).MainPage.DisplayAlert("Mismatch", "Pattern is incorrect!", "OK");
+                        await (Application.Current as App).MainPage.DisplayAlert(Resx.StutteringResources.mismatched, Resx.StutteringResources.incorrect_pattern, Resx.StutteringResources.ok);
                     }
                     break;
                 default:
@@ -155,25 +155,25 @@ namespace Stuttering.ViewModels
                 case LockCheckType.EnableLock:
                     if (string.IsNullOrEmpty(GlobalSettings.CurrentUser.Pattern))
                     {
-                        PatternLabel = "Draw new Pattern";
+                        PatternLabel = Resx.StutteringResources.new_pattern;
                         status = LockStatus.EnterNew;
                     }
                     else
                     {
-                        PatternLabel = "Draw Pattern to enable";
+                        PatternLabel = Resx.StutteringResources.enable_pattern;
                         status = LockStatus.EnterCurrent;
                     }
                     break;
                 case LockCheckType.DisableLock:
-                    PatternLabel = "Draw Pattern to disable";
+                    PatternLabel = Resx.StutteringResources.disable_pattern;
                     status = LockStatus.EnterCurrent;
                     break;
                 case LockCheckType.ChangeLock:
-                    PatternLabel = "Draw Current Pattern";
+                    PatternLabel = Resx.StutteringResources.current_pattern;
                     status = LockStatus.EnterCurrent;
                     break;
                 case LockCheckType.Login:
-                    PatternLabel = "Draw Pattern";
+                    PatternLabel = Resx.StutteringResources.enter_pattern;
                     var user = SQLiteDbManager.GetUser();
                     if (user != null)
                     {

@@ -128,7 +128,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Stuttering\Stuttering.csproj">
-      <Project>{458A12B0-A7DD-43EE-83A9-5CC7B538DF4A}</Project>
+      <Project>{FE952F3F-5F75-451D-AFA2-7AA15F548732}</Project>
       <Name>Stuttering</Name>
     </ProjectReference>
   </ItemGroup>

@@ -52,7 +52,7 @@ namespace Stuttering.ViewModels
         {
             IsBusy = true;
             var ch = obj as Chapter;
-            if(ch != null)
+            if(ch != null && !ch.IsLocked)
             {
                 navigation.PushAsync(new Views.Management.ExercisesList(ch));
             }

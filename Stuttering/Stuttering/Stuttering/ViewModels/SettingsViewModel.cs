@@ -31,9 +31,75 @@ namespace Stuttering.ViewModels
         private bool isStartup = true;
         private bool isPatternLockEnabled;
         private string selectedLockType;
+        private int flexibleChapters;
+        private int flexibleLevels;
+        private int onsetChapters;
+        private int onsetLevels;
         private AppLanguage selectedLanguage;
         private List<string> lockTypesList;
         private List<AppLanguage> languagesList;
+
+
+        public int FlexibleChapters
+        {
+            get
+            {
+                return this.flexibleChapters;
+            }
+            set
+            {
+                if (this.flexibleChapters == value)
+                {
+                    return;
+                }
+                SetProperty(ref flexibleChapters, value);
+            }
+        }
+        public int FlexibleLevels
+        {
+            get
+            {
+                return this.flexibleLevels;
+            }
+            set
+            {
+                if (this.flexibleLevels == value)
+                {
+                    return;
+                }
+                SetProperty(ref flexibleLevels, value);
+            }
+        }
+        public int OnsetChapters
+        {
+            get
+            {
+                return this.onsetChapters;
+            }
+            set
+            {
+                if (this.onsetChapters == value)
+                {
+                    return;
+                }
+                SetProperty(ref onsetChapters, value);
+            }
+        }
+        public int OnsetLevels
+        {
+            get
+            {
+                return this.onsetLevels;
+            }
+            set
+            {
+                if (this.onsetLevels == value)
+                {
+                    return;
+                }
+                SetProperty(ref onsetLevels, value);
+            }
+        }
         public string BreathDate
         {
             get
@@ -370,6 +436,20 @@ namespace Stuttering.ViewModels
             IsBusy = true;
             await Task.Delay(10);
             metadate = SQLiteDbManager.GetMetadata();
+
+            var flChapters = SQLiteDbManager.GetModuleChapters(ModuleType.Flexible);
+            var onChapters = SQLiteDbManager.GetModuleChapters(ModuleType.Onset);
+
+            FlexibleChapters = flChapters.Where(ch => ch.IsLocked == false).Count();
+            var flCh = flChapters.Where(ch => ch.IsLocked == false).LastOrDefault();
+            var flLevels = SQLiteDbManager.GetChapterExercises(flCh.Id);
+            FlexibleLevels = flLevels.Where(le => le.IsLocked == false).Count();
+
+            OnsetChapters = onChapters.Where(ch => ch.IsLocked == false).Count();
+            var onCh = onChapters.Where(ch => ch.IsLocked == false).LastOrDefault();
+            var onLevels = SQLiteDbManager.GetChapterExercises(onCh.Id);
+            OnsetLevels = onLevels.Where(le => le.IsLocked == false).Count();
+
             if (metadate != null)
             {
                 if (metadate.BreathDateTime.Year != 1)

@@ -446,4 +446,61 @@
   <data name="varies_para" xml:space="preserve">
     <value>ہکلاہٹ کرنے والے افراد تمام حالات میں ایک ہی طرح یا ایک ہی جتنا نہیں ہکلاتے۔ ہکلاہٹ میں تغیرات بعض اوقات انکے والدین اوراساتذہ کوالجھادیتے ہیں کہ وہ کیوں ایک صورتِ حال میں تو روانی میں بولتا ہے مگر دوسرے میں کیوں ہکلاتا ہے۔یہ اسلیئے نہیں ہوتا کہ و ہ ایک صورتِ حال میں تو روانی سے بولنے کی کوشش کرتا ہے مگر دوسری صورتِ حال میں نہیں بلکہ یہ اسلئے ہے کہ ہکلاہٹ ہر صورتِحال میں  بدلتی رھتی ہوتی ہے</value>
   </data>
+  <data name="lock_type" xml:space="preserve">
+    <value>لاک ٹائپ</value>
+  </data>
+  <data name="lock" xml:space="preserve">
+    <value>لاک</value>
+  </data>
+  <data name="change_pin" xml:space="preserve">
+    <value>چینج پن</value>
+  </data>
+  <data name="change_pattern" xml:space="preserve">
+    <value>چینج پیٹرن</value>
+  </data>
+  <data name="self_management" xml:space="preserve">
+    <value>سیلف مینیجمنٹ</value>
+  </data>
+  <data name="self_assessment" xml:space="preserve">
+    <value>خود تشخیص</value>
+  </data>
+  <data name="chapter" xml:space="preserve">
+    <value>باب</value>
+  </data>
+  <data name="level" xml:space="preserve">
+    <value>لیول</value>
+  </data>
+  <data name="stats" xml:space="preserve">
+    <value>اعدادوشمار</value>
+  </data>
+  <data name="new_pin" xml:space="preserve">
+    <value>نیا پن درج کریں</value>
+  </data>
+  <data name="enter_again" xml:space="preserve">
+    <value>دوبارہ درج کریں</value>
+  </data>
+  <data name="enable_pin" xml:space="preserve">
+    <value>پن درج کریں</value>
+  </data>
+  <data name="disable_pin" xml:space="preserve">
+    <value>پن درج کریں</value>
+  </data>
+  <data name="pin_description" xml:space="preserve">
+    <value>اس پن کو مت بھولنا۔ اگر آپ اس پن کو بھول جاتے ہیں، تو آپ دوبارہ ایپ میں لاگ ان نہیں ہو سکیں گے۔</value>
+  </data>
+  <data name="new_pattern" xml:space="preserve">
+    <value>نیا پیٹرن بنائیں</value>
+  </data>
+  <data name="draw_again" xml:space="preserve">
+    <value>دوبارہ بنائیں</value>
+  </data>
+  <data name="pin" xml:space="preserve">
+    <value>پن</value>
+  </data>
+  <data name="pattern" xml:space="preserve">
+    <value>پیٹرن</value>
+  </data>
+  <data name="go" xml:space="preserve">
+    <value>ٹھیک ہے</value>
+  </data>
 </root>

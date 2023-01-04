@@ -88,7 +88,7 @@ namespace Stuttering.ViewModels
         {
             IsBusy = true;
             var exercise = obj as Exercise;
-            if(exercise != null)
+            if(exercise != null && !exercise.IsLocked)
             {
                 navigation.PushAsync(new Views.Management.Exercise(exercise));
             }

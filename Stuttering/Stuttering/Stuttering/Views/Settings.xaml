@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentView xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:i18n="clr-namespace:Stuttering.Helper;assembly=Stuttering"
              x:Class="Stuttering.Views.Settings" >
     <ContentView.Content>
         <Grid>
@@ -8,9 +9,9 @@
                      Spacing="10" Padding="10,0">
                 <Frame HorizontalOptions="FillAndExpand">
                     <StackLayout>
-                        <Label Text="Self Management" FontSize="Medium" TextDecorations="Underline" HorizontalTextAlignment="Center"/>
+                        <Label Text="{i18n:Translate self_management}" FontSize="Medium" TextDecorations="Underline" HorizontalTextAlignment="Center"/>
                         <StackLayout Orientation="Horizontal">
-                            <Label Text="Breathing exercise" FontSize="Medium" VerticalTextAlignment="Center"/>
+                            <Label Text="{i18n:Translate title_breathing}" FontSize="Medium" VerticalTextAlignment="Center"/>
                             <Label Text="" HorizontalOptions="EndAndExpand" FontSize="14"
                                TextColor="{StaticResource Primary}" HorizontalTextAlignment="Center">
                                 <Label.FormattedText>
@@ -24,28 +25,36 @@
                         </StackLayout>
                         <BoxView BackgroundColor="LightGray" HorizontalOptions="FillAndExpand" HeightRequest="1"/>
                         <StackLayout Orientation="Horizontal">
-                            <Label Text="Flexible rate of speech" FontSize="Medium" VerticalTextAlignment="Center"/>
+                            <Label Text="{i18n:Translate title_flexible}" FontSize="Medium" VerticalTextAlignment="Center"/>
                             <Label Text="" HorizontalOptions="EndAndExpand" FontSize="14"
                                TextColor="{StaticResource Primary}" HorizontalTextAlignment="Center">
                                 <Label.FormattedText>
                                     <FormattedString>
-                                        <Span Text="Chapter 0"/>
+                                        <Span Text="{i18n:Translate chapter}"/>
+                                        <Span Text=" "/>
+                                        <Span Text="{Binding FlexibleChapters}"/>
                                         <Span Text="&#10;"/>
-                                        <Span Text="Level 0"/>
+                                        <Span Text="{i18n:Translate level}"/>
+                                        <Span Text=" "/>
+                                        <Span Text="{Binding FlexibleLevels}"/>
                                     </FormattedString>
                                 </Label.FormattedText>
                             </Label>
                         </StackLayout>
                         <BoxView BackgroundColor="LightGray" HorizontalOptions="FillAndExpand" HeightRequest="1"/>
                         <StackLayout Orientation="Horizontal">
-                            <Label Text="Easy Onset" FontSize="Medium" VerticalTextAlignment="Center"/>
+                            <Label Text="{i18n:Translate title_onset}" FontSize="Medium" VerticalTextAlignment="Center"/>
                             <Label Text="" HorizontalOptions="EndAndExpand" FontSize="14"
                                TextColor="{StaticResource Primary}" HorizontalTextAlignment="Center">
                                 <Label.FormattedText>
                                     <FormattedString>
-                                        <Span Text="Chapter 0"/>
+                                        <Span Text="{i18n:Translate chapter}"/>
+                                        <Span Text=" "/>
+                                        <Span Text="{Binding OnsetChapters}"/>
                                         <Span Text="&#10;"/>
-                                        <Span Text="Level 0"/>
+                                        <Span Text="{i18n:Translate level}"/>
+                                        <Span Text=" "/>
+                                        <Span Text="{Binding OnsetLevels}"/>
                                     </FormattedString>
                                 </Label.FormattedText>
                             </Label>
@@ -54,10 +63,10 @@
                 </Frame>
                 <Frame HorizontalOptions="FillAndExpand">
                     <StackLayout>
-                        <Label Text="Self Assessment" FontSize="Medium" TextDecorations="Underline" HorizontalTextAlignment="Center"/>
+                        <Label Text="{i18n:Translate self_assessment}" FontSize="Medium" TextDecorations="Underline" HorizontalTextAlignment="Center"/>
                         <StackLayout Orientation="Horizontal">
-                            <Label Text="Self rating" FontSize="Medium" VerticalTextAlignment="Center"/>
-                            <Label Text="Stats" HorizontalOptions="EndAndExpand" FontSize="14"
+                            <Label Text="{i18n:Translate title_rating}" FontSize="Medium" VerticalTextAlignment="Center"/>
+                            <Label Text="{i18n:Translate stats}" HorizontalOptions="EndAndExpand" FontSize="14"
                                TextColor="{StaticResource Primary}" HorizontalTextAlignment="Center"
                                    TextDecorations="Underline" VerticalOptions="CenterAndExpand">
                                 <Label.GestureRecognizers>
@@ -67,8 +76,8 @@
                         </StackLayout>
                         <BoxView BackgroundColor="LightGray" HorizontalOptions="FillAndExpand" HeightRequest="1"/>
                         <StackLayout Orientation="Horizontal">
-                            <Label Text="Self evaluation" FontSize="Medium" VerticalTextAlignment="Center"/>
-                            <Label Text="Stats" HorizontalOptions="EndAndExpand" FontSize="14"
+                            <Label Text="{i18n:Translate title_evaluation}" FontSize="Medium" VerticalTextAlignment="Center"/>
+                            <Label Text="{i18n:Translate stats}" HorizontalOptions="EndAndExpand" FontSize="14"
                                TextColor="{StaticResource Primary}" HorizontalTextAlignment="Center"
                                    TextDecorations="Underline" VerticalOptions="CenterAndExpand">
                                 <Label.GestureRecognizers>
@@ -78,8 +87,8 @@
                         </StackLayout>
                         <BoxView BackgroundColor="LightGray" HorizontalOptions="FillAndExpand" HeightRequest="1"/>
                         <StackLayout Orientation="Horizontal">
-                            <Label Text="Stutter rater" FontSize="Medium" VerticalTextAlignment="Center"/>
-                            <Label Text="Stats" HorizontalOptions="EndAndExpand" FontSize="14"
+                            <Label Text="{i18n:Translate title_rater}" FontSize="Medium" VerticalTextAlignment="Center"/>
+                            <Label Text="{i18n:Translate stats}" HorizontalOptions="EndAndExpand" FontSize="14"
                                TextColor="{StaticResource Primary}" HorizontalTextAlignment="Center"
                                    TextDecorations="Underline" VerticalOptions="CenterAndExpand">
                                 <Label.GestureRecognizers>
@@ -92,14 +101,14 @@
                 <Frame HorizontalOptions="FillAndExpand">
                     <StackLayout>
                         <StackLayout Orientation="Horizontal">
-                            <Label Text="Language" FontSize="Medium" HorizontalOptions="StartAndExpand"
+                            <Label Text="{i18n:Translate language}" FontSize="Medium" HorizontalOptions="StartAndExpand"
                                    VerticalTextAlignment="Center" />
                             <Picker ItemsSource="{Binding LanguagesList}" ItemDisplayBinding="{Binding DisplayName}"
-                                SelectedItem="{Binding SelectedLanguage}" Title="Language" HorizontalTextAlignment="Center"/>
+                                SelectedItem="{Binding SelectedLanguage}" Title="{i18n:Translate langugage}" HorizontalTextAlignment="Center"/>
                         </StackLayout>
                         <Grid>
                             <StackLayout Orientation="Horizontal">
-                                <Label Text="Lock" FontSize="Medium"/>
+                                <Label Text="{i18n:Translate lock}" FontSize="Medium"/>
                                 <Switch x:Name="PatternSwitch" IsToggled="{Binding IsLockEnabled}" 
                                 HorizontalOptions="EndAndExpand" ThumbColor="{StaticResource Primary}"
                                 OnColor="MediumSeaGreen"/>
@@ -111,16 +120,16 @@
                             </StackLayout>
                         </Grid>
                         <StackLayout Orientation="Horizontal" IsVisible="{Binding IsLockEnabled}">
-                            <Label Text="Lock Type" FontSize="Medium" HorizontalOptions="StartAndExpand"
+                            <Label Text="{i18n:Translate lock_type}" FontSize="Medium" HorizontalOptions="StartAndExpand"
                                    VerticalTextAlignment="Center" />
                             <Picker ItemsSource="{Binding LockTypesList}" WidthRequest="70"
-                                SelectedItem="{Binding SelectedLockType}" Title="Lock Type" HorizontalTextAlignment="Center"/>
+                                SelectedItem="{Binding SelectedLockType}" Title="{i18n:Translate lock_type}" HorizontalTextAlignment="Center"/>
                         </StackLayout>
                         <StackLayout Orientation="Horizontal">
-                            <Button Text="Change Pin" x:Name="pinBtn" HorizontalOptions="CenterAndExpand"
+                            <Button Text="{i18n:Translate change_pin}" x:Name="pinBtn" HorizontalOptions="CenterAndExpand"
                     IsVisible="{Binding IsLockEnabled}" Command="{Binding ChangePinCommand}"
                                      Style="{StaticResource GnrBtn}"/>
-                            <Button Text="Change Pattern" x:Name="patternBtn" HorizontalOptions="CenterAndExpand"
+                            <Button Text="{i18n:Translate change_pattern}" x:Name="patternBtn" HorizontalOptions="CenterAndExpand"
                     IsVisible="{Binding IsPatternLockEnabled}" Command="{Binding ChangePatternCommand}"
                                      Style="{StaticResource GnrBtn}"/>
                         </StackLayout>
