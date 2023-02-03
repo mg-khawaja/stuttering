@@ -1,4 +1,6 @@
-﻿using Stuttering.Models;
+﻿using Firebase.Storage;
+using Plugin.CloudFirestore;
+using Stuttering.Models;
 using Stuttering.SQL;
 using System;
 using System.Collections.Generic;
@@ -35,6 +37,78 @@ namespace Stuttering.Views.Auth
                 SQLiteDbManager.DeleteAllUsers();
                 SQLiteDbManager.DeleteMetadata();
 
+                //Firestore Exerices Creation
+
+                /*
+                foreach (int moduleType in Enum.GetValues(typeof(ModuleType)))
+                {
+                    foreach (int exerciseType in Enum.GetValues(typeof(ExerciseType)))
+                    {
+                        for (int i = 1; i <= 100; i++)
+                        {
+                            if ((exerciseType == 4 && i == 11) || (exerciseType == 3 && i == 51))
+                                break;
+
+                            var exer = new Exercise()
+                            {
+                                Id = Convert.ToInt32(moduleType + "" + exerciseType + i),
+                                ChapterId = Convert.ToInt32(moduleType + "" + exerciseType),
+                                ExerciseType = exerciseType,
+                                ModuleType = moduleType,
+                                IsOpen = false,
+                                Level = i,
+                                Name = "Level " + i,
+                            };
+                            await CrossCloudFirestore.Current
+                                .Instance
+                                .Collection(((ModuleType)moduleType).ToString())
+                                .Document(((ExerciseType)exerciseType).ToString())
+                                .Collection("Exercise")
+                                .Document(((ModuleType)moduleType).ToString() + ((ExerciseType)exerciseType).ToString() + i)
+                                .SetAsync(exer);
+                        }
+                    }
+                }
+                */
+
+                //Firestore Data in SQL
+
+                List<Chapter> chapters = new List<Chapter>();
+                List<Exercise> exercises = new List<Exercise>();
+
+                foreach (int moduleType in Enum.GetValues(typeof(ModuleType)))
+                {
+                    var documentChapters = await CrossCloudFirestore.Current
+                                        .Instance
+                                        .Collection(((ModuleType)moduleType).ToString())
+                                        .GetAsync();
+                    var dataChapters = documentChapters.Documents.ToList();
+                    foreach (var item in dataChapters)
+                    {
+                        chapters.Add(item.ToObject<Chapter>());
+                    }
+                    foreach (int exerciseType in Enum.GetValues(typeof(ExerciseType)))
+                    {
+                        var documentExercises = await CrossCloudFirestore.Current
+                            .Instance
+                            .Collection(((ModuleType)moduleType).ToString())
+                            .Document(((ExerciseType)exerciseType).ToString())
+                            .Collection("Exercise")
+                            .GetAsync();
+                        var dataExercises = documentExercises.Documents.ToList();
+                        foreach (var item in dataExercises)
+                        {
+                            exercises.Add(item.ToObject<Exercise>());
+                        }
+                    }
+                }
+                SQLiteDbManager.InsertChapters(chapters);
+                SQLiteDbManager.InsertExercises(exercises);
+                
+
+                //Demo Data in SQL
+
+                /*
                 //Flexible Chapters
                 SQLiteDbManager.InsertChapters(new List<Models.Chapter>()
             {
@@ -279,6 +353,7 @@ namespace Stuttering.Views.Auth
                         },
                         new Exercise()
                         {
+
                             ChapterId = item.Id,
                             ExerciseType = Convert.ToInt32(ExerciseType.Paragraph),
                             ModuleType = Convert.ToInt32(ModuleType.Flexible),
@@ -479,6 +554,7 @@ namespace Stuttering.Views.Auth
                     });
                     }
                 }
+                */
 
                 SQLiteDbManager.SaveMetadata(new Metadata()
                 {
@@ -492,6 +568,7 @@ namespace Stuttering.Views.Auth
             }
             catch (Exception ex)
             {
+                await DisplayAlert("Error", ex.Message, "OK");
                 (Application.Current as App).MainPage = new PinView(Helper.LockCheckType.Login);
             }
         }

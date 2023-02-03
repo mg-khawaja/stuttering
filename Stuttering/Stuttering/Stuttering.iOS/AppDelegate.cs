@@ -24,6 +24,7 @@ namespace Stuttering.iOS
         {
             Rg.Plugins.Popup.Popup.Init();
             global::Xamarin.Forms.Forms.Init();
+            Firebase.Core.App.Configure();
             Syncfusion.SfChart.XForms.iOS.Renderers.SfChartRenderer.Init();
             LoadApplication(new App());
 

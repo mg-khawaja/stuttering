@@ -42,7 +42,7 @@ namespace Stuttering.SQL
         }
         public static List<Exercise> GetChapterExercises(int id)
         {
-            return Connection.Table<Exercise>().Where(ex => ex.ChapterId == id).ToList();
+            return Connection.Table<Exercise>().Where(ex => ex.ChapterId == id).OrderBy(e => e.Level).ToList();
         }
         public static int InsertExercises(List<Exercise> items)
         {
@@ -70,7 +70,7 @@ namespace Stuttering.SQL
         }
         public static List<Chapter> GetModuleChapters(ModuleType module)
         {
-            return Connection.Table<Chapter>().Where(ex => ex.ModuleType == (int)module).ToList();
+            return Connection.Table<Chapter>().Where(ex => ex.ModuleType == (int)module).OrderBy(e=> e.Order).ToList();
         }
         public static Exercise GetToDoExercise(int chapterId)
         {

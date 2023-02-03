@@ -14,12 +14,12 @@ namespace Stuttering.Droid
     public class AudioSerivce : IAudio
     {
         MediaPlayer player;
-        StreamReader sr;
+        //StreamReader sr;
         public AudioSerivce()
         {
         }
 
-        public void Play(string url)
+        public async void Play(string url)
         {
             if (player != null && player.IsPlaying)
             {
@@ -28,10 +28,15 @@ namespace Stuttering.Droid
             if (player == null)
             {
                 this.player = new MediaPlayer();
-                sr = new StreamReader(url);
-                player.SetDataSource(new StreamMediaDataSource(sr.BaseStream));
-                this.player.SetAudioStreamType(Stream.Music);
-                this.player.Prepare();
+                //sr = new StreamReader(url);
+                //player.SetDataSource(new StreamMediaDataSource(sr.BaseStream));
+                //this.player.SetAudioStreamType(Stream.Music);
+
+                player.SetAudioStreamType(Stream.Music);
+                player.SetDataSource(Android.App.Application.Context, Android.Net.Uri.Parse(url));
+                player.Prepare();
+
+                //this.player.Prepare();
                 this.player.Start();
             }
             else
@@ -53,7 +58,7 @@ namespace Stuttering.Droid
                 if (player != null)
                 {
                     this.player.Stop();
-                    sr.Close();
+                    //sr.Close();
                     player = null;
                 }
             }

@@ -1,4 +1,5 @@
-﻿using Plugin.Multilingual;
+﻿using Firebase.Storage;
+using Plugin.Multilingual;
 using Stuttering.Helper;
 using Stuttering.Models;
 using Stuttering.Resx;
@@ -9,6 +10,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using System.Net.Http;
+using System.Runtime.InteropServices.ComTypes;
 using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
@@ -27,7 +29,7 @@ namespace Stuttering.ViewModels
         private int currentLevel;
         private int totalLevels;
         string audioUrl;
-        string downloadedFilePath;
+        //string downloadedFilePath;
         bool isDownloading;
         public bool IsDownloading
         {
@@ -139,7 +141,7 @@ namespace Stuttering.ViewModels
         bool isEngSelected { get; set; }
         public ExerciseViewModel(INavigation _navigation, Exercise _exercise)
         {
-            audioUrl = "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3";
+            //audioUrl = "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3";
             navigation = _navigation;
             Exercise = _exercise;
             OnAppearingCommand = new Command(OnAppearing);
@@ -149,7 +151,7 @@ namespace Stuttering.ViewModels
         }
         private async Task<string> DownloadAsync(string url)
         {
-            var downloadedFilePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal), "audio.mp3");
+            var downloadedFilePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal), Exercise.Id + ".mp3");
 
             var success = await DownloadFileAsync(url, downloadedFilePath);
 
@@ -170,7 +172,7 @@ namespace Stuttering.ViewModels
                 var downloadStream = await client.GetStreamAsync(fileUrl);
                 var fileStream = File.Create(downloadedFilePath);
                 await downloadStream.CopyToAsync(fileStream);
-                this.downloadedFilePath = downloadedFilePath;
+                //this.downloadedFilePath = downloadedFilePath;
                 downloadStream.Close();
                 fileStream.Close();
                 return true;
@@ -228,43 +230,59 @@ namespace Stuttering.ViewModels
         {
             try
             {
-                if (string.IsNullOrEmpty(downloadedFilePath))
+                if (Connectivity.NetworkAccess == NetworkAccess.Internet)
                 {
-
-                    if (Connectivity.NetworkAccess == NetworkAccess.Internet)
+                    if (string.IsNullOrEmpty(audioUrl))
                     {
+                        //MediaoMediaPlayer oMediaPlayer = new MediaoMediaPlayer(); oMediaPlayer.SetAudioStreamType(Stream.Music); oMediaPlayer.SetDataSource("http://www.myownhosteddomain.com/songsapi/playlist"); oMediaPlayer.Prepare(); oMediaPlayer.Start();
+
                         IsDownloading = true;
-                        string audioUrl;
+                        FirebaseStorage firebaseStorage = new FirebaseStorage("stuttering-3337b.appspot.com");
+                        var chap = ((ModuleType)Exercise.ModuleType).ToString() + "Chapters";
+                        var exer = ((ExerciseType)Exercise.ExerciseType).ToString() + "s";
                         if (isEngSelected)
                         {
-                            audioUrl = exercise.Audio;
+                            audioUrl = await firebaseStorage
+                                .Child(chap)
+                                .Child(exer)
+                                .Child("English")
+                                .Child(Exercise.Level + ".mp3")
+                                .GetDownloadUrlAsync();
                         }
                         else
                         {
-                            audioUrl = exercise.UrduAudio;
+                            audioUrl = await firebaseStorage
+                                .Child(chap)
+                                .Child(exer)
+                                .Child("Urdu")
+                                .Child(Exercise.Level + ".mp3")
+                                .GetDownloadUrlAsync();
                         }
 
-                        var path = await DownloadAsync(audioUrl);
-                        if (!string.IsNullOrEmpty(path))
-                        {
-                            IsDownloading = false;
-                            downloadedFilePath = path;
-                            PlayAudio();
-                        }
-                        else
-                        {
-                            (Application.Current as App).MainPage.DisplayToastAsync("file could not be downloaded! please try again later");
-                        }
+                        //await MediaManager.CrossMediaManager.Current.Play(audioUrl);
+                        PlayAudio(audioUrl);
+
+                        //var path = await DownloadAsync(audioUrl);
+                        //if (!string.IsNullOrEmpty(path))
+                        //{
+                        //    IsDownloading = false;
+                        //    downloadedFilePath = path;
+                        //    PlayAudio(audioUrl);
+                        //}
+                        //else
+                        //{
+                        //    (Application.Current as App).MainPage.DisplayToastAsync("file could not be downloaded! please try again later");
+                        //}
                         IsDownloading = false;
                     }
                     else
                     {
-                        (Application.Current as App).MainPage.DisplayToastAsync("please connect to the internet connection!");
+                        player.Play(audioUrl);
                     }
                 }
                 else
                 {
-                    player.Play(downloadedFilePath);
+                    (Application.Current as App).MainPage.DisplayToastAsync("please connect to the internet connection!");
                 }
             }
             catch (Exception ex)
@@ -273,9 +291,9 @@ namespace Stuttering.ViewModels
                 (Application.Current as App).MainPage.DisplayToastAsync("something went wrong!");
             }
         }
-        private void PlayAudio()
+        private void PlayAudio(string url)
         {
-            player.Play(downloadedFilePath);
+            player.Play(url);
         }
         private void Pause(object obj)
         {

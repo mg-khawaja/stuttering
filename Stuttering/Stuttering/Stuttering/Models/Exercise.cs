@@ -1,16 +1,19 @@
-﻿using SQLite;
+﻿using Plugin.CloudFirestore.Attributes;
+using SQLite;
 using Stuttering.Helper;
 
 namespace Stuttering.Models
 {
     public class Exercise
     {
-        [PrimaryKey, AutoIncrement]
+        [PrimaryKey]
         public int Id { get; set; }
         public bool IsOpen { get; set; }
+        [Ignored]
         public bool IsLocked { get { return !IsOpen; } }
         public int Level { get; set; }
         public string Name { get; set; }
+        [Ignored]
         public string DescriptionVisible
         {
             get
@@ -26,6 +29,7 @@ namespace Stuttering.Models
         public string Description { get; set; }
         public string Audio { get; set; }
         public string UrduAudio { get; set; }
+        [Ignored]
         public string AudioVisible
         {
             get
