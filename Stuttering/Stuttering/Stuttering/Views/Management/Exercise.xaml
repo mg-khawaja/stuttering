@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:i18n="clr-namespace:Stuttering.Helper;assembly=Stuttering"
              x:Class="Stuttering.Views.Management.Exercise"
              NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
@@ -21,8 +22,11 @@
                     </Label.FormattedText>
                 </Label>
             </StackLayout>
-            <Label Text="{Binding Exercise.DescriptionVisible}" TextColor="black" HorizontalOptions="CenterAndExpand"
+            <ScrollView Margin="20,90,20,90">
+                <Label Text="{Binding Exercise.DescriptionVisible}" TextColor="black" HorizontalOptions="CenterAndExpand"
                                        VerticalOptions="CenterAndExpand" FontSize="22" FontAttributes="Bold"/>
+            </ScrollView>
+            
             <Frame Padding="0" CornerRadius="5" Margin="20" HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand">
                 <StackLayout Spacing="20" BackgroundColor="LightGray" 
                              Padding="10" Orientation="Horizontal">
@@ -34,6 +38,9 @@
                              VerticalOptions="EndAndExpand" Command="{Binding StopCommand}" HeightRequest="30"/>
                 </StackLayout>
             </Frame>
+            <Button Text="{i18n:Translate next}" IsVisible="{Binding IsNextVisible}" Command="{Binding NextCommand}"
+                    VerticalOptions="EndAndExpand" HorizontalOptions="EndAndExpand" Margin="20" BackgroundColor="{StaticResource Primary}"
+                    TextColor="White" WidthRequest="70"/>
             <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" IsVisible="{Binding IsDownloading}">
                 <Frame BackgroundColor="White" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
                     <StackLayout >

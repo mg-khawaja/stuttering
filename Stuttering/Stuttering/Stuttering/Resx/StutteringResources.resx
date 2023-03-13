@@ -502,6 +502,9 @@
   <data name="go" xml:space="preserve">
     <value>Go</value>
   </data>
+  <data name="next" xml:space="preserve">
+    <value>Go</value>
+  </data>
   <data name="current_pin" xml:space="preserve">
     <value>موجودہ پن درج کریں</value>
   </data>

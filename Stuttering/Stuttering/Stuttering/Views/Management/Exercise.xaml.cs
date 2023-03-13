@@ -54,6 +54,14 @@ namespace Stuttering.Views.Management
         }
         private void BackButton_Clicked(object sender, EventArgs e)
         {
+            try
+            {
+                vm.player.Stop();
+            }
+            catch (Exception)
+            {
+
+            }
             Navigation.PopAsync();
         }
     }

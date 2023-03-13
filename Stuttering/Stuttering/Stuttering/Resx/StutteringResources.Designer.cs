@@ -841,6 +841,15 @@ namespace Stuttering.Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Go.
+        /// </summary>
+        internal static string next {
+            get {
+                return ResourceManager.GetString("next", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Nothing is Wrong with Stutters.
         /// </summary>
         internal static string nothing_heading {

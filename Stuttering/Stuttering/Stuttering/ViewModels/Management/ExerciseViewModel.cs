@@ -24,6 +24,8 @@ namespace Stuttering.ViewModels
     {
         public IAudio player;
         private Exercise exercise;
+        private Exercise nextExercise;
+        private bool isNextVisible;
         private string moduleType;
         private Chapter chapter;
         private int currentLevel;
@@ -31,6 +33,23 @@ namespace Stuttering.ViewModels
         string audioUrl;
         //string downloadedFilePath;
         bool isDownloading;
+        public bool IsNextVisible
+        {
+            get
+            {
+                return this.isNextVisible;
+            }
+
+            set
+            {
+                if (this.isNextVisible == value)
+                {
+                    return;
+                }
+
+                SetProperty(ref isNextVisible, value);
+            }
+        }
         public bool IsDownloading
         {
             get
@@ -137,6 +156,7 @@ namespace Stuttering.ViewModels
         public Command PlayCommand { get; }
         public Command PauseCommand { get; }
         public Command StopCommand { get; }
+        public Command NextCommand { get; }
         INavigation navigation;
         bool isEngSelected { get; set; }
         public ExerciseViewModel(INavigation _navigation, Exercise _exercise)
@@ -145,6 +165,7 @@ namespace Stuttering.ViewModels
             navigation = _navigation;
             Exercise = _exercise;
             OnAppearingCommand = new Command(OnAppearing);
+            NextCommand = new Command(NextClicked);
             PlayCommand = new Command(Play);
             PauseCommand = new Command(Pause);
             StopCommand = new Command(Stop);
@@ -186,6 +207,10 @@ namespace Stuttering.ViewModels
         private void OnAppearing(object obj)
         {
             IsBusy = true;
+            if (navigation.NavigationStack[navigation.NavigationStack.Count -2] is Stuttering.Views.Management.Exercise)
+            {
+                this.navigation.RemovePage(this.navigation.NavigationStack[this.navigation.NavigationStack.Count - 2]);
+            }
             player = DependencyService.Get<IAudio>();
             Chapter = SQLiteDbManager.GetChapter(Exercise.ChapterId);
             var list = SQLiteDbManager.GetChapterExercises(Chapter.Id);
@@ -194,12 +219,14 @@ namespace Stuttering.ViewModels
 
             if (CurrentLevel != TotalLevels)
             {
-                var nextExercise = SQLiteDbManager.GetExerciseByLevel(Exercise.Level + 1, (int)Exercise.ModuleType, (int)Exercise.ExerciseType);
+                IsNextVisible = true;
+                nextExercise = SQLiteDbManager.GetExerciseByLevel(Exercise.Level + 1, (int)Exercise.ModuleType, (int)Exercise.ExerciseType);
                 nextExercise.IsOpen = true;
                 SQLiteDbManager.SaveExercise(nextExercise);
             }
             else
             {
+                IsNextVisible = false;
                 var chList = SQLiteDbManager.GetModuleChapters((ModuleType)Chapter.ModuleType);
                 if (chList.Count != Chapter.Order)
                 {
@@ -217,6 +244,9 @@ namespace Stuttering.ViewModels
                         meta.OnsetChapter += 1;
                     }
                     SQLiteDbManager.SaveMetadata(meta);
+                    var nextExr = SQLiteDbManager.GetExerciseByLevel(1, Chapter.ModuleType, Exercise.ExerciseType + 1);
+                    nextExr.IsOpen = true;
+                    SQLiteDbManager.SaveExercise(nextExr);
                 }
             }
             var culture = LocalizationResourceManager.Instance.CurrentCulture;
@@ -224,6 +254,16 @@ namespace Stuttering.ViewModels
                 isEngSelected = true;
             else
                 isEngSelected = false;
+            IsBusy = false;
+        }
+        private async void NextClicked(object obj)
+        {
+            if (!IsNextVisible)
+                return;
+            IsBusy = true;
+            //await navigation.PopAsync();
+            player.Stop();
+            await navigation.PushAsync(new Stuttering.Views.Management.Exercise(nextExercise));
             IsBusy = false;
         }
         private async void Play(object obj)

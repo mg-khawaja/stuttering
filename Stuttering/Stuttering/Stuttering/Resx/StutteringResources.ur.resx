@@ -199,7 +199,7 @@
     <value>اکیلے میں نہیں ہکلاتے </value>
   </data>
   <data name="facts_para_2_3" xml:space="preserve">
-    <value>ہکلاتے کیونکہ وہ باآسانی اپنی توجہ بولنے پرمرکوز کر سکتے ہیں لیکن جب وہ لوگوں کے درمیان ہوتے ہیں تو توجہ مرکوز کرنا مشکل ہوتاہے اوروہ تناؤ محسوس کرتے ہیں جسکے نتیجے میں وہ ہکلاتے ہیں </value>
+    <value>کیونکہ وہ باآسانی اپنی توجہ بولنے پرمرکوز کر سکتے ہیں لیکن جب وہ لوگوں کے درمیان ہوتے ہیں تو توجہ مرکوز کرنا مشکل ہوتاہے اوروہ تناؤ محسوس کرتے ہیں جسکے نتیجے میں وہ ہکلاتے ہیں </value>
   </data>
   <data name="facts_para_3_1" xml:space="preserve">
     <value> کچھ صورتِ حال میں ہکلانے والے افراد کو</value>
@@ -332,7 +332,7 @@
     <value>ہکلاہٹ کا جائزہ</value>
   </data>
   <data name="overview_definition" xml:space="preserve">
-    <value>ہکلاہٹ ایک ایسا  مرض ہے جس میں افرا کو  روانی سے بولنے میں متواتر اور واضح مسائل درپیش ہوتےہیں</value>
+    <value>ہکلاہٹ ایک ایسا  مرض ہے جس میں افراد کو  روانی سے بولنے میں متواتر اور واضح مسائل درپیش ہوتےہیں</value>
   </data>
   <data name="rater_inst_d" xml:space="preserve">
     <value>جب آپ بولتے ہوئے ہکلاتے ہیں تو D بٹن دبائیں۔</value>
@@ -502,5 +502,8 @@
   </data>
   <data name="go" xml:space="preserve">
     <value>ٹھیک ہے</value>
+  </data>
+  <data name="next" xml:space="preserve">
+    <value>آگے</value>
   </data>
 </root>

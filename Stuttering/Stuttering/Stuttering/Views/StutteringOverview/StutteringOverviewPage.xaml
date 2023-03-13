@@ -168,7 +168,7 @@
                                FontSize="Medium" BackgroundColor="#00AFB6"/>
                         </xct:Expander.Header>
                         <xct:Expander.Content>
-                            <Image Source="journey.png" HorizontalOptions="FillAndExpand" Margin="5"/>
+                            <Image x:Name="journeyImage" Source="journey.png" HorizontalOptions="FillAndExpand" Margin="5"/>
                         </xct:Expander.Content>
                     </xct:Expander>
                 </Frame>
@@ -181,7 +181,7 @@
                                FontSize="Medium" BackgroundColor="#00AFB6"/>
                         </xct:Expander.Header>
                         <xct:Expander.Content>
-                            <Image Source="hierarchy.png" HorizontalOptions="FillAndExpand" Margin="5"/>
+                            <Image x:Name="hierarchyImage" Source="hierarchy.png" HorizontalOptions="FillAndExpand" Margin="5"/>
                         </xct:Expander.Content>
                     </xct:Expander>
                 </Frame>

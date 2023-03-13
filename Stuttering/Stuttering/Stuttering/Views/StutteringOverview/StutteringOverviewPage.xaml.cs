@@ -29,7 +29,11 @@ namespace Stuttering.Views
             journey.AnimationLength = 10;
             hierarchy.AnimationEasing = Easing.SpringIn;
             hierarchy.AnimationLength = 10;
-
+            if (Helper.GlobalSettings.CurrentUser.Language == "ur")
+            {
+                journeyImage.Source = "journeyUrdu.jpeg";
+                hierarchyImage.Source = "hierarchyUrdu.jpeg";
+            }
         }
     }
 }

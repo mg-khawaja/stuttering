@@ -33,7 +33,8 @@
                         <Frame Padding="0" CornerRadius="10" HasShadow="True">
                             <Grid BackgroundColor="{StaticResource Lighter}" HeightRequest="200">
                                 <Label Text="{Binding DescriptionVisible}" TextColor="black" HorizontalOptions="CenterAndExpand"
-                                       VerticalOptions="CenterAndExpand" FontSize="16" FontAttributes="Bold"/>
+                                       VerticalOptions="CenterAndExpand" FontSize="16" FontAttributes="Bold" Padding="10" HorizontalTextAlignment="Center"
+                                       LineBreakMode="TailTruncation"/>
                                 <StackLayout BackgroundColor="#e0e0e0" Opacity="0.9" IsVisible="{Binding IsLocked}" 
                                              HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
                                 <Image Source="lock.png" HorizontalOptions="EndAndExpand" VerticalOptions="Start"
